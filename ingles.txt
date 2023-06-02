@@ -1,67 +1,143 @@
-let's get started - vamos começar
-add a repository to github desktop to star collaborating - adicione um repositório ao gisthub descktop para começar a colaborar
-dreate a tutorial repository... - crie um repositório de tutoriais...
-clone a repository from the internet - clonar um repositório da internet
-create a new repository on your hard drive - crie um novo repositório no seu disco rígido 
-add an ecisting repository from your hard drive - adicione um repositório existente do seu disco rígido
-protip you can drag & drop an existing repository folder here to add it to desktop - protip você pode arrastar e soltar uma pasta de repositório existente aqui para adiconá-la à área de trabalho.
-filter your repositories - filtre seus repositórios 
-looks like there are no repositories for humbertoJ-r on fithub.com. refresh this list if you've created a repository recently. - parece que não há repositórios para humberto no gisthub.com atualize esta lista se você criou um repositório recentemente.
-file - arquivo
-edit - editar
-view - visualizar
-repository - repositório
-brach - ramo
-help - ajuda
+1- let's get started - vamos começar
+
+2- add a repository to github desktop to star collaborating - adicione um repositório ao gisthub descktop para começar a colaborar
+
+3- dreate a tutorial repository... - crie um repositório de tutoriais...
+
+4- clone a repository from the internet - clonar um repositório da internet
+
+5- create a new repository on your hard drive - crie um novo repositório no seu disco rígido 
+
+6- add an ecisting repository from your hard drive - adicione um repositório existente do seu disco rígido
+
+7- protip you can drag & drop an existing repository folder here to add it to desktop - protip você pode arrastar e soltar uma pasta de repositório existente aqui para adiconá-la à área de trabalho.
+
+8- filter your repositories - filtre seus repositórios 
+
+9- looks like there are no repositories for humbertoJ-r on Github.com. refresh this list if you've created a repository recently. - parece que não há repositórios para humberto no gisthub.com atualize esta lista se você criou um repositório recentemente.
+
+PALAVRAS TRADUZIDAS 
+
+1- file - arquivo
+2- edit - editar
+3- view - visualizar
+4- repository - repositório
+5- brach - ramo
+6- help - ajuda
 
 
 Dia 26/05/2023
 
-learning target - 
-i know my course path in this module -
-WELCOME TIME -
-MODULE: BEGINNERS - 
-IS THIS COURSE FOR YOU OR NOT?
-INTRODUCING MYSELF USING BASIC ENGLISH.
-BASIC ENGLISH -
-WHY SHOULD I LEARN ENGLISH? -
-LAST NAME, AGE, AND OCCUPATION.-
-5 APPS TO HELP ME LEARNING ENGLISH -
-making a conversation -
-to comunicate -
-verb to be -
-talk about your family -
-what's... ? IT's... (Q&A) -
-DESCRIBE YOUR FRIENDS AND FAMILY -
-DESCRIBE PEPOPLE - 
-FRIENDLY - 
-BORING -
-YES OR NO QUESTIONS - 
-AGE AND BIRTHDAY -
-MISTAKES -
-ISN'T AND AREN'T -
-HELLO WORLD -
-ASK QUESTIONS -
-PREPOSITIONS OF PLACES - 
-COMPARE PEOPLE -
-AUXILIARY VERBS -
-DO, DON'T, DOES, AND DOESN'T. -
-ARTICLES A, AN, AND THE - 
-DEVICES AND TECHNOLOGY - 
-SEE MORE -
-LET'S CHECH -
- I KNOW - EU SEI 
-TALK ABOUT - CONVERSAR SOBRE
-FRIENDS & FAMILY - AMIGOS E FAMILIA
+1- learning target - OBJETIVO DE APRENDIZAGEM 
+
+2- i know my course path in this module - CONHEÇO MEU CURSO NESTE MÓDULO 
+
+3- WELCOME TIME - HORA DE BEM-VINDO
+
+4- MODULE: BEGINNERS - MÓDULO INICIANTES 
+
+5- IS THIS COURSE FOR YOU OR NOT? - ESSE CURSO É PARA VOCÊ OU NÃO?
+
+6- INTRODUCING MYSELF USING BASIC ENGLISH. - ME APRESENTANDO USANDO INGLÊS BÁSICO
+
+7- BASIC ENGLISH - INGLÊS BÁSICO 
+
+8- WHY SHOULD I LEARN ENGLISH? - POR QUE DEVO APRENDER INGLÊS
+
+9- LAST NAME, AGE, AND OCCUPATION.- SOBRENOME, IDADE E OCUPAÇÃO
+
+10- 5 APPS TO HELP ME LEARNING ENGLISH - 5 APP PARA ME AJUDAR A APRENDER INGLÊS
+
+11- making a conversation - FAZENDO UMA CONVERSA
+
+12- to comunicate - COMUNICAR 
+
+13- verb to be - VERBO SER
+
+14- talk about your family - FALE SOBRE SUA FAMÍLIA 
+
+15- what's... ? IT's... (Q&A) - O QUE É ? ISSO É ? PERGUNTAS E RESPOSTAS
+
+16- DESCRIBE YOUR FRIENDS AND FAMILY - DESCREVA SEUS AMIGOS E FAMILIA
+
+17- DESCRIBE PEPOPLE - DESCREVA AS PESSOAS 
+
+18- FRIENDLY - AMIGÁVEL
+
+19- BORING -  TEDIOSA - TEDIOSO 
+
+20- YES OR NO QUESTIONS - PERGUNTAS DE SIM OU NÃO 
+
+21- AGE AND BIRTHDAY - IDADE E ANIVERSÁRIO
+
+22- MISTAKES - ERROS 
+
+23- ISN'T AND AREN'T - NÃO É E NÃO É 
+
+24- HELLO WORLD - OLÁ MUNDO 
+
+25- ASK QUESTIONS - PERGUNTE
+
+26- PREPOSITIONS OF PLACES - PREPOSIÇÕES DE LUGARES
+
+27- COMPARE PEOPLE - COMPARAR PESSOAS 
+
+28- AUXILIARY VERBS - VERBOS AUXILIARES 
+
+29- DO, DON'T, DOES, AND DOESN'T. - FAZ, NÃO FAZ, FAZ E NÃO FAZ
+
+30- ARTICLES A, AN, AND THE -  ARTIGOS A, AN, E OS
+
+31- DEVICES AND TECHNOLOGY - DIPOSITIVOS E TECNOLOGIA
+
+32- SEE MORE - VER MAIS
+
+33- LET'S CHECH - VAMOS CHECAR 
+
+34- I KNOW - EU SEI 
+
+35- TALK ABOUT - CONVERSAR SOBRE
+
+36- FRIENDS & FAMILY - AMIGOS E FAMILIA
 
 dia 31/05/2023
-overview -
-input - 
-operator - 
-output -
-math - 
+
+overview - VISÃO GERAL 
+input - ENTRADA
+operator - OPERADORA - OPERADOR
+output - SAÍDA 
+math - MATEMÁTICA
 
 
+DAY - SEXTA FEIRA, DIA 02/06/2023
 
-
-
+it is for you if... - É PRA VOCÊ SE
+learning target - OBJETIVO DE APRENDIZAGEM 
+i understand that this course is for me or not. - EU ENTENDO QUE ESTE CURSO É PARA MIM OU NÃO
+welcome time - HORA DE BEM-VINDO 
+support us - APOIE-NOS
+question - PERGUNTA
+is this course for me - ESSE CURSO É PARA MIM 
+i'm a beginner - EU SOU UM INICIANTE 
+you are beginning to learn english - VOCÊ ESTÁ COMEÇANDO A APRENDER INGLÊS
+i'm studying... - ESTOU ESTUDANDO
+you need to study for a school test. - VOCÊ PRECISA ESTUDAR PARA A PROVA DA ESCOLA
+subcribe - SE INSCREVER
+SHARE - COMPARTILHAR
+SHORT - CURTA, CURTO
+I WANT MORE - EU QUERO MAIS 
+YOU WANT TO LEARN ENGLISH EVEN MORE - VOCÊ QUER APRENDER INGLÊS AINDA MAIS 
+LINKS IN THE DESCRIPTION - LINKS NA DESCRIÇÃO
+THIS IS NOT FOR YOU IF... - ISSO NÃO É PARA VOCÊ SE
+I'M FLUENT -  EU SOU FLUENTE
+I CAN SPEAK FLUENT ENGLISH - EU FALO INGLÊS FLUENTE
+BECAUSE I HAVE ALWAYS PREFERRED DOGS - PORQUE SEMPRE PREFERI OS CACHORROS 
+I HAVE NO TIME - NÃO TENHO TEMPO
+I DON'T HAVE TIME TO STUDY AND TO DO THE ASSIGNMENTS - NÃO TENHO TEMPO PARA ESTUDAR E PARA FAZER OS TRABALHOS
+I'M TOO SCARED - ESTOU COM MUITO MEDO
+I'M TOO SCARED TO TALK IN ENGLISH - ESTOU COM MEDO DE FALAR EM INGLÊS 
+LET'S CHECK - VAMOS CHECAR 
+SEE MORE - VER MAIS
+BEGINNER - INCIANTE 
+FLUENT - FLUENTE 
+STUDYING -ESTUDANDO 
