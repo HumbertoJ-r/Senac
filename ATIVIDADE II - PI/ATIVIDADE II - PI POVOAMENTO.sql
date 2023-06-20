@@ -15,17 +15,61 @@ insert into CLIENTE (nome, cpf, rg, data_de_nascimento, endereco, nome_pai, nome
 select * from cliente
 
 insert into instrutor (nome, cpf, rg, data_nascimento, endereco, telefone, telefone_contato, email, numero_credencial) values
-('Diogo Juan Moura','991.774.659-54','50.703.260-3','1947-03-07','Travessa da Comissão, 298','(67) 2627-1555','(67) 99415-5954','diogojuanmoura@isometro.com.br	79023');
-Diogo Juan Moura	991.774.659-54	50.703.260-3	07/03/1947	Travessa da Comissão, 298	Igor Caio Moura	Antônia Olivia Luzia	(67) 2627-1555	(67) 99415-5954	diogojuanmoura@isometro.com.br	79023
-Ana Luiza Santos	174.913.953-76	18.844.957-7	22/02/1993	Rua Doutor Alfredo Barcelos, 135	Yuri Cláudio Santos	Esther Olivia	(21) 2845-1184	(21) 99631-4218	ana_santos@ruizonline.com.br	21060
-Tatiane Ester da Cruz	457.514.825-30	50.283.662-3	07/06/1956	Avenida Candeias, 294	Luiz Enzo Ricardo da Cruz	Adriana Hadassa Heloisa	(69) 3619-6755	(69) 99284-3013	tatiane.ester.dacruz@pmm.am.gov.br	76870
-Elisa Andrea Lopes	163.406.416-01	24.981.728-7	19/02/1968	Condomínio Vila dos Pássaros, 915	Giovanni Levi Mário Lopes	Stefany Sueli Maya	(92) 2691-9328	(92) 99447-8495	elisaandrealopes@hydropowermc.com.br	69023
+('Diogo Juan Moura','991.774.659-54','50.703.260-3','1947-03-07','Travessa da Comissão, 298','(67) 2627-1555','(67) 99415-5954','diogojuanmoura@isometro.com.br	79023'),
+('Ana Luiza Santos','174.913.953-76','18.844.957-7','1993-02-22','Rua Doutor Alfredo Barcelos, 135','(21) 2845-1184','(21) 99631-4218','ana_santos@ruizonline.com.br','21060'),
+('Tatiane Ester da Cruz','457.514.825-30','50.283.662-3','1956-06-07','Avenida Candeias, 294','(69) 3619-6755','(69) 99284-3013','tatiane.ester.dacruz@pmm.am.gov.br','76870'),
+('Elisa Andrea Lopes','163.406.416-01','24.981.728-7','1968-02-19','Condomínio Vila dos Pássaros, 915','(92) 2691-9328','(92) 99447-8495','elisaandrealopes@hydropowermc.com.br','69023');
 
-('Giovanna Josefa Oliveira', '556.126.039-16', '17.427.318-6', '1999-02-08', 'Rua CV 38, 528', 'Jorge Tiago Fábio Oliveira', 'Joana Helena', '(62) 2883-5275', '(62) 99602-9999', 'giovanna_josefa_oliveira@endoimplantes.com.br'),
-('Caroline Jennifer Aparício', '720.933.331-20', '36.146.286-4', '1998-05-11', 'Rua Auriverde, 248', 'Leonardo Eduardo Aparício', 'Giovana Alessandra', '(67) 2729-4781', '(67) 99263-7632', 'caroline.jennifer.aparicio@avantii.com.br'),
-('Tatiane Ester da Cruz', '802.091.925-26', '11.810.755-0', '2005-03-24', 'Avenida João Ribeiro, 755', 'José Gael da Rocha', 'Ayla Renata Raimunda', '(79) 2834-6803', '(79) 99271-1621', 'elias.tomas.darocha@zaniniengenharia.com.br'),
-('Elisa Andrea Lopes', '743.636.876-14', '26.283.987-8', '1976-02-17', 'Avenida da Terra, 853', 'Ian Anthony Nelson Caldeira', 'Tânia Natália Larissa', '(95) 3604-3874', '(95) 98768-5710', 'daniela.stefany.caldeira@oxiteno.com'),
+select * from instrutor;
 
-Diogo Juan Moura	991.774.659-54	50.703.260-3	07/03/1947	Travessa da Comissão, 298	Igor Caio Moura	Antônia Olivia Luzia	(67) 2627-1555	(67) 99415-5954	diogojuanmoura@isometro.com.br	79023
+insert into diretores (nome, cpf, rg, data_nascimento, endereco, telefone, telefone_contato, email, numero_credencial) values
+('José Murilo da Luz','910.434.378-60','34.385.780-7','1954-01-09','Rua Miguel Guimarães, 988','(85) 2821-1807','(85) 99156-8251','josemurilodaluz@fulltransport.com.br','60831'),
+('Juan Leandro Rodrigues','113.176.077-83','40.724.768-3','1993-03-25','Rua Rui Rogério de Carvalho, 528','(19) 2516-6366','(19) 98311-3778','juan_rodrigues@goldenhotel.com.br','13100');
+
+select * from diretores
+
+drop table atendentes;
+
+create table atendentes
+(
+id int primary key auto_increment not null,
+nome varchar(255), 
+cpf varchar(45), 
+rg varchar(45), 
+data_nascimento date, 
+endereco varchar(255), 
+telefone varchar(25), 
+telefone_contato varchar(25), 
+email varchar(255)
+);
+
+insert into atendentes (nome, cpf, rg, data_nascimento, endereco, telefone, telefone_contato, email) values
+('Carlos Thiago Peixoto','799.907.299-05','44.005.126-5','1999-02-16','Rua Sergipe, 555','(86) 3500-0914','(86) 98618-9505','carlos-peixoto97@sp.senac.com.br'),
+('Nair Carla Marina Brito','517.125.965-86','24.868.864-9','1981-01-09','Avenida Euclides da Cunha, 564','(96) 3519-2935','(96) 99207-2842','nair_carla_brito@andritz.com');
+
+select * from atendentes 
+
+drop table servicos;
+
+ALTER TABLE vendas DROP FOREIGN KEY fk_VENDAS_SERVIÇOS1;
+
+select * from servicos;
+
+create table servivos
+ALTER TABLE SERVIVOS rename SERVICOS;
+(
+id int primary key auto_increment not null,
+tipo_de_servico varchar(255)
+
+insert into servicos (tipo_de_servico) values
+('Primeira Habilitação Categoria A'),
+('Primeira Habilitação Categoria B'),
+('Primeira Habilitação Categoria AB'),
+('Adição de Categoria A'),
+('Adição de Categoria B'),
+('Mudança de Categoria C'),
+('Mudança de Categoria D'),
+('Mudança de Categoria E');
+
 
 
