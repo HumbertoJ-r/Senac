@@ -55,11 +55,13 @@ ALTER TABLE vendas DROP FOREIGN KEY fk_VENDAS_SERVIÇOS1;
 
 select * from servicos;
 
-create table servivos
 ALTER TABLE SERVIVOS rename SERVICOS;
+
+create table servivos
 (
 id int primary key auto_increment not null,
 tipo_de_servico varchar(255)
+);
 
 insert into servicos (tipo_de_servico) values
 ('Primeira Habilitação Categoria A'),
@@ -71,5 +73,16 @@ insert into servicos (tipo_de_servico) values
 ('Mudança de Categoria D'),
 ('Mudança de Categoria E');
 
+insert into categorias (cartegoria) values
+('A'),
+('B'),
+('C'),
+('D'),
+('E');
+
+alter table categorias change cartegoria categoria char(2);
+
+drop table aulas_praticas_has_instrutor;
+drop table cliente_has_aulas_praticas;
 
 
