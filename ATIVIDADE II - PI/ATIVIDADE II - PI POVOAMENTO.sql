@@ -73,7 +73,13 @@ insert into servicos (tipo_de_servico) values
 ('Mudança de Categoria D'),
 ('Mudança de Categoria E');
 
-insert into categorias (cartegoria) values
+create table categorias 
+(
+id int primary key auto_increment not null,
+categorias char(2)
+);
+
+insert into categorias (categorias) values
 ('A'),
 ('B'),
 ('C'),
@@ -81,8 +87,135 @@ insert into categorias (cartegoria) values
 ('E');
 
 alter table categorias change cartegoria categoria char(2);
-
+alter table vendas modify column id_diretores int default null;
+alter table vendas modify column id_atendente int default null;
 drop table aulas_praticas_has_instrutor;
 drop table cliente_has_aulas_praticas;
 
+alter table vendas change column SERVIÇOS_idSERVIÇOS id_servicos int;
+alter table vendas add column id_cliente int;
+alter table vendas add foreign key (id_cliente) references cliente (idcliente); 
+alter table vendas add column id_atendente int;
+alter table vendas add foreign key (id_atendente) references atendentes (id);
+alter table vendas add column id_diretores int;
+alter table vendas add foreign key (id_diretores) references diretores (iddiretores);
 
+alter table aulas_praticas add column id_instrutor int;
+alter table aulas_praticas add foreign key (id_instrutor) references instrutor (idinstrutor);
+alter table aulas_praticas add column id_categoria int;
+alter table aulas_praticas add foreign key (id_categoria) references categorias (id);
+
+select * from categorias;
+
+drop table categorias;
+drop table instrutor_has_categorias;
+
+select * from vendas;
+select * from servicos;
+select * from cliente;
+select * from atendentes;
+select * from diretores;
+
+alter table vendas change quanitidade_venda quantidade_venda int;
+insert into vendas (ID_SERVICOS, quantidade_venda, data_venda, id_cliente, id_atendente, id_diretores) values
+('1','1','2023-01-17','1','1','1'),
+('2','1','2023-02-13','2','2','2'),
+('3','1','2023-03-05','3','2','1'),
+('4','1','2023-04-06','4','1','2'),
+('5','1','2023-05-19','5','2','1'),
+('6','1','2023-06-21','6','2','2'),
+('7','1','2023-06-10','7','1 ','2'),
+('8','1','2023-05-16','8','1','1'),
+('1','1','2023-04-30','9','2','2'),
+('2','1','2023-03-11','10','1','2'),
+('3','1','2023-02-09','11','2 ','1');
+
+select * from vendas;
+select * from categorias;
+
+insert into aulas_praticas (data_da_aula, cliente_idcliente, id_instrutor, id_categoria) values
+('2023-01-05 09:30:00','1','1','1'),('2023-01-05 10:40:00','1','1','1'),
+('2023-01-06 09:30:00','2','2','2'),('2023-01-06 10:40:00','2','2','2'),
+('2023-01-07 09:30:00','3','3','3'),('2023-01-07 10:40:00','3','3','3'),
+('2023-01-08 09:30:00','4','4','4'),('2023-01-08 10:40:00','4','4','4'),
+('2023-01-09 09:30:00','5','1','5'),('2023-01-09 10:40:00','5','1','5'),
+('2023-01-10 09:30:00','6','2','1'),('2023-01-10 10:40:00','6','2','1'),
+('2023-01-11 09:30:00','7','3','2'),('2023-01-11 10:40:00','7','3','2'),
+('2023-01-12 09:30:00','8','4','3'),('2023-01-12 10:40:00','8','4','3'),
+('2023-01-13 09:30:00','9','1','1'),('2023-01-13 10:40:00','9','1','1'),
+('2023-01-14 09:30:00','10','2','2'),('2023-01-14 10:40:00','10','2','2'),
+('2023-01-15 09:30:00','11','3','3'),('2023-01-15 10:40:00','11','3','3'),
+('2023-01-16 09:30:00','1','4','4'),('2023-01-16 10:40:00','1','4','4'),
+('2023-01-17 09:30:00','2','1','5'),('2023-01-17 10:40:00','2','1','5'),
+('2023-01-18 09:30:00','3','2','1'),('2023-01-18 10:40:00','3','2','1'),
+('2023-01-19 09:30:00','4','3','2'),('2023-01-20 10:40:00','4','3','2'),
+('2023-01-20 09:30:00','5','4','3'),('2023-01-21 10:40:00','5','4','3'),
+('2023-01-21 09:30:00','6','1','4'),('2023-01-22 10:40:00','6','1','4'),
+('2023-01-22 09:30:00','7','2','5'),('2023-01-23 10:40:00','7','2','5');
+
+select * from aulas_praticas;
+select * from curso_cfca;
+
+insert into curso_cfca (data_inicio, data_de_termino, numero_certificado, nome_do_cfca, cliente_idcliente) values
+('2023-01-01','2023-01-20','123456','Aki','1'),
+('2023-01-01','2023-01-20','123457','Aki','2'),
+('2023-01-01','2023-01-20','123458','Aki','3'),
+('2023-01-01','2023-01-20','123459','Aki','9'),
+('2023-01-01','2023-01-20','123460','Aki','10'),
+('2023-01-01','2023-01-20','123461','Aki','11');
+
+insert into emissao (data_emissao, cliente_idcliente) values
+('2023-07-07','1'),
+('2023-07-08','2'),
+('2023-07-09','3'),
+('2023-07-10','4'),
+('2023-07-11','5'),
+('2023-07-12','6'),
+('2023-07-13','7'),
+('2023-07-14','8'),
+('2023-07-15','9'),
+('2023-07-16','10'),
+('2023-07-17','11');
+
+insert into exame_medico (data_exame, nome_do_medico, endereco_da_clinica, renach, cliente_idcliente) values
+('2023-01-06','Raul Igor Bernardo Fogaça','Rua Severino Pereira da Silva, 251','942995','1'),
+('2023-02-07','Mirella Patrícia de Paula', 'Rua Quadra 25, 235','714424','2'),
+('2023-03-08','Kaique Márcio Julio Moreira','Rua Sete, 869','680781','3'),
+('2023-04-09','Raul Igor Bernardo Fogaça','Rua Severino Pereira da Silva, 251','262492','4'),
+('2023-05-10','Mirella Patrícia de Paula','Rua Quadra 25, 235','676981','5'),
+('2023-06-11','Kaique Márcio Julio Moreira','Rua Sete, 869','541445','6'),
+('2023-06-12','Raul Igor Bernardo Fogaça','Rua Severino Pereira da Silva, 251','323442','7'),
+('2023-05-13','Mirella Patrícia de Paula','Rua Quadra 25, 235','827602','8'),
+('2023-04-14','Kaique Márcio Julio Moreira','Rua Sete, 869','385392','9'),
+('2023-03-15','Raul Igor Bernardo Fogaça','Rua Severino Pereira da Silva, 251','813854','10'),
+('2023-02-16','Mirella Patrícia de Paula','Rua Quadra 25, 235','934642','11');
+
+alter table exame_pratico modify column data_exame date;
+
+insert into exame_pratico (data_exame, resultado, cliente_idcliente) values
+('2023-07-01','APROVADO','1'),('2023-07-02','APROVADO','2'),
+('2023-07-03','APROVADO','3'),('2023-07-04','APROVADO','4'),
+('2023-07-05','APROVADO','5'),('2023-07-06','APROVADO','6'),
+('2023-07-07','APROVADO','7'),('2023-07-08','APROVADO','8'),
+('2023-07-09','APROVADO','9'),('2023-07-10','APROVADO','10'),
+('2023-07-11','APROVADO','11');
+
+insert into exame_teorico (data_exame, resultado, cliente_idcliente) values
+('2023-06-01','A','1'),('2023-06-02','A','2'),
+('2023-06-03','A','3'),('2023-06-04','A','9'),
+('2023-06-05','A','10'),('2023-06-06','A','11');
+
+insert into exame_psicotecnico (data_exame, nome_do_medico, endereco_da_clinica, renach, cliente_idcliente) values
+('2023-01-06','Thiago Cauê Nascimento','Rua Quadra 5 MC, 177','942995','1'),
+('2023-02-07','Letícia Priscila Nogueira','Rua Triunfo, 751','714424','2'),
+('2023-03-08','Emily Fernanda Caroline Lima','Rua Aldery de Paula Damasceno, 716','680781','3'),
+('2023-04-09','Thiago Cauê Nascimento','Rua Quadra 5 MC, 177','262492','4'),
+('2023-05-10','Letícia Priscila Nogueira','Rua Triunfo, 751','676981','5'),
+('2023-06-11','Emily Fernanda Caroline Lima','Rua Aldery de Paula Damasceno, 716','541445','6'),
+('2023-06-12','Thiago Cauê Nascimento','Rua Quadra 5 MC, 177','323442','7'),
+('2023-05-13','Letícia Priscila Nogueira','Rua Triunfo, 751','827602','8'),
+('2023-04-14','Emily Fernanda Caroline Lima','Rua Aldery de Paula Damasceno, 716','385392','9'),
+('2023-03-15','Thiago Cauê Nascimento','Rua Quadra 5 MC, 177','813854','10'),
+('2023-02-16','Letícia Priscila Nogueira','Rua Triunfo, 751','934642','11');
+
+select * from exame_psicotecnico;
