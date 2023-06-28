@@ -1,0 +1,13 @@
+O banco de dados uc4atividades tem um plano de backups diário, que é realizado todos os dias ao final do expediente ás 20:00. O backups é 
+automatizado realizado pelo programa 'Task Scheduler Library' do Windowns. Por exemplo o backups está agendado para hoje 2023-06-27 ás 20:00:00, 
+para realizar esse agendamento é preciso entrar no programa 'task scheduler library' 
+
+1 - Já no Task Scheduler, clique com o botão direito do mouse em Task Scheduler Library e escolha uma nova pasta (New Folder).
+2 - Em seguida, insira o nome na pasta. Nesse caso, será o utilizado o nome Meus Scripts.
+3 - Clique então com o botão direito na pasta criada e selecione a opção Create a Basic Task, que levará você para a seguinte janela.
+4 - Depois de clicar no botão Next, você será levado à próxima janela.
+5 - Depois de selecionar a opção Daily (diariamente), clique em Next.
+6 - Na próxima janela, escolha quando você quer que comece a execução da tarefa e por quantos dias ela deverá ser executada. Nesse caso, a escolha foi por um ano (365 dias).
+7 - Na próxima janela, escolha a opção de iniciar um programa (Start Program).
+8 - Após isso, selecione então o caminho do script que deverá ser executado.
+9 - Por fim, confirme as informações da sua tarefa diária de backup e clique em Finish.
