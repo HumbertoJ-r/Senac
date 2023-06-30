@@ -49,35 +49,29 @@ CREATE PROCEDURE minha_procedure()
 BEGIN  
    DECLARE id_porto_alegre INT UNSIGNED DEFAULT 12;
    SELECT id_porto_alegre;
-END;
-//
-DELIMITER;
+END//
+DELIMITER ;
 
 CALL MINHA_PROCEDURE();
 
 DELIMITER //
 CREATE PROCEDURE repetir(p1 INT)
-BEGIN
-  SET @x = 0;
-  REPEAT SET @x = @x + 1; UNTIL @x > p1 END REPEAT;
-END;
-//
-DELIMITER;
-
+	BEGIN
+		SET @x = 0;
+		REPEAT SET @x = @x + 1; UNTIL @x > p1 END REPEAT;
+	END//
+DELIMITER ;
 CALL REPETIR();
 
-DELIMITER //
 
 DELIMITER //
 CREATE PROCEDURE MINHA_PROCEDURE3(ID_CIDADE INT)
 	BEGIN
 		SELECT ID_CIDADE;
-	END;
-//
-DELIMITER;
+	END//
+DELIMITER ;
 
 CALL MINHA_PROCEDURE3(100);
-
 
 DELIMITER $$
 CREATE PROCEDURE MINHA_PROCEDURE4()
@@ -429,4 +423,48 @@ create procedure exibir_media1(nota decimal(5,2))
     DELIMITER ;
     
 CALL exibir_media1(6.2);
+
+delimiter //
+create procedure buscar_terrenos1 (id_vendedor INT)
+	begin
+		declare id_encontrado int;
+        select id into id_encontrado from vendedores where id = id_vendedor;
+        if id_encontrado is null then
+			select "Nenhum registro encontrado";
+		else	
+			select * from terrenos;
+		end if;
+	end //
+delimiter ;
+
+call buscar_terrenos1(1);
+
+DELIMITER //
+CREATE FUNCTION BUSCAR_PRECO1 (ID_TERRENO INT) RETURNS DECIMAL (24,2) DETERMINISTIC
+	BEGIN 
+		DECLARE V_CUSTO_M2 DECIMAL(6,2);
+        DECLARE V_LARGURA INT;
+        DECLARE V_COMPRIMENTO INT;
+        SELECT C.CUSTO_METRO_QUADRADO, T.LARGURA, T.COMPRIMENTO
+        INTO V_CUSTO_M2, V_LARGURA, V_COMPRIMENTO
+        FROM TERRENOS T INNER JOIN CIDADES C ON C.ID = T.ID_CIDADE
+        WHERE T.ID = ID_TERRENO;
+        
+        RETURN (V_COMPRIMENTO * V_CUSTO_M2);
+	END//
+DELIMITER ;
+    
+SELECT BUSCAR_PRECO1(1);
+    
+    
+DELIMITER //
+CREATE TRIGGER MARCAR_VENDA AFTER INSERT ON VENDAS 
+
+FOR EACH ROW 
+	BEGIN
+		UPDATE TERRENOS 
+        SET VENDIDO = TRUE
+        WHERE ID = NEW.ID_TERRENO;
+	END//
+DELIMITER ;
 
