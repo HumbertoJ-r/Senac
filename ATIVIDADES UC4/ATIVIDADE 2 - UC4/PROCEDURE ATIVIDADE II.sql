@@ -30,6 +30,7 @@ END //
 DELIMITER ;
 CALL ListaComprasPorCliente2(88, '2020-01-08', '2022-01-08');
 
+
 DELIMITER //
 CREATE FUNCTION verificarStatusCliente(cliente_id INT)  RETURNS varchar(10) DETERMINISTIC
 BEGIN
@@ -54,6 +55,7 @@ DELIMITER ;
 -- CLIENTE 88 PREMIUM --
 -- CLIENTE 01 REGULAR --
 select verificarStatusCliente (01);
+
 
 DELIMITER //
 CREATE TRIGGER nova_senha BEFORE INSERT ON usuario
