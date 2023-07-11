@@ -4,7 +4,7 @@ grant select on *.* to 'atendente_carlos'@'localhost';
 flush privileges;
 
 create role 'Atendentes';
-GRANT SELECT ON uc4atividades.* TO 'Atendentes';
+GRANT SELECT, INSERT, UPDATE ON db_nova_belo.* TO 'Atendentes';
 FLUSH privileges;
 GRANT 'Atendentes' TO 'atendente_carlos'@'localhost';
 SET DEFAULT ROLE 'Atendentes' TO 'atendente_carlos'@'LOCALHOST';
@@ -21,11 +21,12 @@ SET DEFAULT ROLE 'Atendentes' TO 'atendente_nair'@'LOCALHOST';
 select * from mysql.user;
 show grants for 'Atendentes';
 
+create role 'Diretores';
+GRANT SELECT, INSERT, UPDATE, DELETE ON db_nova_belo.* TO 'Diretores';
+FLUSH privileges;
+
 create user 'diretor_jose'@'localhost' identified by '123456';
 select * from mysql.user;
-create role 'Diretores';
-GRANT SELECT, INSERT, UPDATE, DELETE ON uc4atividades.* TO 'Diretores';
-FLUSH privileges;
 
 GRANT 'Diretores' TO 'diretor_jose'@'localhost';
 SET DEFAULT ROLE 'Diretores' TO 'diretor_jose'@'LOCALHOST';
