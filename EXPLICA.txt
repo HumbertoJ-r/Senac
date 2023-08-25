@@ -1,0 +1,51 @@
+TRANSPORTE
+
+
+
++ tipo
+
++ valor
+
+
+
+HOSPEDAGEM
+
++ descricao
+
++ valorDiaria
+
+
+
+PACOTEDEVIAGEM
+
++ transporte
+
++ hospedagem
+
++ destinho
+
++ qtdDeDias
+
+
+
++ calcularTotalHospedagem
+
++ calcularValorDeLucro
+
++ calcularTotalDoPacote
+
+
+
+VENDA
+
++ nomeCliente
+
++ formaDePagamento
+
++ pacoteDeViagem
+
+
+
++ converter
+
++ mostrarTela

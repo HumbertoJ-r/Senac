@@ -1,0 +1,15 @@
+receber nome e idade 
+o cliente a principio será hospedado no quarto A
+depois o programa deve receber o nome de outro cliente e idade
+se o cliente for mais novo ficará no quarto b
+mas se for mais velhor ficará no quarto A
+e o cliente mais novo passará a ficar no quarto b
+se a pessoa for idosa com mais de 60 anos terá desconto de 40%
+
+nome 
+idade
+mais velho 
+mais novo
+quarto A
+quarto B
+desconto 40%

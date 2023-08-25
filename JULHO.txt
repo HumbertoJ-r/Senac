@@ -36,4 +36,268 @@ EDER LEVAR DOCUMENTOS - OK
 PASSAR CARTÃO 
 ESPERANDO RESULTADO UC4 - OK
 ESPERANDO RESPOSTA PI - OK
+PAGAR CARTÃO NUBANK 
+LEVAR PICÃO ERICK 
+AULA CIEE 
+
+11/07/2023 - TERÇA
+
+POSTO DE SAÚDE 
+DINHEIRO MÃE 
+CORTAR CABELO 
+CONTINUAR ALTERAÇÃO DO BANCO DE DADOS 
+AGENDAR NOVA CONSULTA MÉDICA 
+COMPRAR MOCHILA 
+VERIFICAR CARTÕES 
+CONVÊNIO RAVI
+
+
+12/07/2023 - QUARTA
+
+21/07/2023 - SEXTA
+
+TRANSFERIR DINHEIRO THUKA - OK 
+SCANNER DOCUEMNTOS PARA ENIVAR PARA O CONVENIO - OK
+MANDAR DOCUMENTOS PARA O CONVENIO - OK
+JUNTAR OS PDFS - OK
+PRATICAR JAVA
+ASSISTIR AULAS DO CURSO CIEE
+MELHORAR CURRICULO 
+PROCURAR ALGUMAS VAGAS 
+LIMPAR EMAILS 
+VERIFICAR QUANTIDADE DE DINHEIRO 
+PASSAR NO MERCADO 
+CORTAR A UNHA 
+MANDAR MENSAGEM PARA RENOVAÇÕES
+MANDAR MENSAGEM ANTONIO 
+
+24/07/2023
+
+ENTREGAR PLACA ROANY 
+COMEÇAR JAVA
+
+25/07/2023
+
+MANDAR DOCUMENTOS DIGITALIZADOS - OK
+VERIFICAR CONVERSAS - OK
+CONTA NET - OK
+CONTA DE LUZ - OK
+SAIR DOS CANAIS DO YOUTUBE DE DIVERSÃO - OK
+DESINSTALAR JOGOS CELULAR -OK
+
+ABASTECER O CARRO 
+BUSCAR AS CRIANÇAS 
+AULA DO SEGUNDO MODULO 
+COMEÇAR AS ATIVIDADES 
+CONTINUAR O CURSO DO GOOGLE
+IR NO EDER
+PEGAR AS ATIVIDADES DE PORTUGOL 
+FUMAR SÓ DEPOIS DO MEIO DIA 
+VERIFICAR VALORES
+FUMEI UM CIGARRO ÁS 08:00 - I
+LIMPAR EMAILS
+VERIFICAR PARA SACAR DINHEIRO DA BINANCE
+FAZER CADASTRO JOSE DIGILSON - NO POUPATEMPO OU NO DETRAN 
+
+26/07/2023
+
+
+27/07/2023
+
+ABASTECER CARRO - OK
+PAGAR MURILO - OK
+PALHETA CARRO - OK
+AULAS DAVI - OK
+MENSAGENS - OK
+DOUGLAS EMISSÃO - OK
+MANDAR MENSAGEM DOUGLAS - OK 
+FAZER CADASTRO JOSE DIGILSON - OK
+AGENDAMENTO JOSE DIGILSON - OK
+FAZER UM EMAIL JOSE DIGILSON - OK
+AGENDAMENTO AGENDA EMAIL - OK
+PESQUISAR CNH JOÃO - OK
+AVISAR O SR. JOSE SOBRE O AGENDAMENTO - OK 
+DATA DE NASCIMENTO JOÃO - OK
+JOÃO RECICLAGEM - OK
+
+ATIVIDADES UC5
+PAGAR CONVENIO 
+DAR COMIDA PARA OS BICHOS 
+MANDAR MENSAGEM DINHA
+CURSO GOOGLE
+GIT HUB
+VAGAS 
+SITE DE VAGAS 
+LINKEDIN 
+EVENTO DE TECNOLOGIA
+LIMPAR EMAIL 
+LICENCIAMENTO ZÉ GUAIANAZES
+EDER LEVAR DOCUMENTOS 
+
+28/07/2023
+
+IMPRIMIR PESQUISA ROGERIO - OK
+SITES FREELANCER - OK
+PRIMEIRO CADASTRO https://www.upwork.com/nx/create-profile/ - OK
+FAZER ORÇAMENTO GABI - OK
+
+https://www.freelancer.com/
+https://www.fiverr.com/
+https://www.toptal.com/
+https://www.guru.com/
+https://www.peopleperhour.com/
+https://99designs.com.br/
+https://www.simplyhired.com/
+https://www.flexjobs.com/
+https://remote.co//
+
+31/07/2023
+
+TRARTAR AS FOTOS PAI - OK 
+FUMEI UM CIGARRO ÁS 08:00 - OK 
+FAZER AS CONTAS DE QUANTO GASTEI COM O MEU PAI 
+ENTRAR NO SENAC 
+ENTRAR NO COUSERA 
+ENTRAR NO LIKENDIN 
+CARTOLA 
+CONTINUAR CADASTRO NA CATHO 
+LIMPEI OS EMAILS
+DEPOSITAR DINHEIRO MÃE 
+FUMEI UM CIGARRO ÁS 10:00 - OK
+
+
+
+2 - NÃO É PROTOCOLO - UM SEGMENTO DE REDE EM QUE PAENAS UM DISPOSITIVO PODE SE COMINICAR POR VEZ É CONHEICIDO COMO 
+dominino de colisão 
+
+4 - DIAFONIA - O FENOMENO EM QUE OS DADOS PODE TRAFEGAR EM UM CABO EM AMBAS AS DIREÇÕES É CONHECIDO COMO COMUNICAÇÃO
+duplex
+
+5 - ENDEREÇO MAC SIGNIFICA ENDEREÇO DE  
+controle de acesso de mídia 
+
+7 - O METODO DE TRANSMISSÃO QUE ENVIA DADOS PARA TODOS OS DISPOSITIVIOS EM UMA LAN É CONHEICMEDO COMO TRANSMIÇÃO
+broadcast
+
+9 - O PROTOCOLO MAIS COMUM DE CAMA DE ENLACE DE DADOS CONEXÕES COM FIM É 
+ethernet
+
+12 - O FENOMENO EM QUE UM PULSO ELETRICO EM UM FIO É ACIDENTAMENTE DETECTADO EM OUTRO FIO PROXIMO É CONHECIDO COMO 
+diafonia
+
+
+13 - A PRIMEIRA PARTE DE UM QUADRO ETHERNET É CONHECIDA COMO 
+preâmbulo 
+
+
+
+3 - roteador
+6 - hexa
+8 - vlan
+10 - cliente
+11 - switch
+14 - protocolo
+15 - protocolo de controle de transmissão
+16 - protocolo de datagrama de usuário	
+
+aponte todos os endereços ip válidos 
+123.456.123.456
+257.70.312.49
+192.168.1.1
+8.8.8.8
+
+quantos endereços ip uma rede de classe c tem 
+
+o que significa CIDR
+ROTEAMENTO ENTRE DESTINOS COM CLASSE
+ROTEAMENTO DE DESTINO SEM CLASSE DA INTERNET 
+ROTEAMENTO ENTRE DOMINIOS SEM CLASSE
+ROTEMANETO DE IDENTIDICAÇÃO COM CLASSE
+
+QUAL DAS ALTERNATIAS A SEGUIR É UMA FORMA CORRETA DE NOTAÇÃO CIDR
+192.168.1.0\24
+192.168.1.0+255.255.255.0
+192.168.1.0:24
+192.168.1.1/24
+
+QUANTOS OCTETOS TEM UMA MASCARA DE SUB-REDE
+1
+2
+3
+4
+
+selecione exemplos de protocolos de roteamento. 
+protocolo de datagrama de usuário
+protocolo de controle de transmissão
+protocolo de gateway de borda
+protocolo de informações de roteamento 
+protocolo de transferencia de hipertexto
+
+quem tem permissão para usuar o espaço de endereços não roteaveis
+a ietf
+qualque pessoa
+a iana 
+a iana é voltada apenas para testes
+
+uma tabela de roteamento comum pode conter quais das seguintes opções?
+rede de destino
+total de saltos 
+ttl 
+endereço de destino
+
+
+origem 192.168.1.254  destino 10.1.1.254
+
+qual é o menor caminho para chegar até o destinho 
+192.168.0.0/24
+192.168.1.64/26
+10.2.1.0/16
+
+2 arp significa
+protocolo de resolução de endereços
+
+
+uma transmissão arp é enviada ao endereço mac especial 
+ff:ff:ff:Ff:ff:ff
+
+
+o processo em que a totalidade do pacote em uma camada que setorna a seção de carga de outra é conhecida como 
+
+encapsulamento 
+
+
+o processo de dividir uma rede grande em diversas sub-redes é conhecido como 
+criação de sub-redes
+
+7- um dispositivo de rede que sabe encaminhar dados para outras redes é conhecido como 
+roteador
+
+10 - rfc significa 
+solicitação para comentarios
+
+
+11 - as faixas de endereço ip que qualquer pessoa pode uusar em suas redes internas são conhecidas como 
+ponto de demarcação
+sistemas autonomos
+espaço de endereços não roteaveis
+
+14 - usando operadores lógicos 1 and 0 =
+verdadeiro 
+falso 
+1
+
+em binario 1 + 1 =
+
+10
+1
+0
+
+
+
+6 - mascara de sub-rede
+8 - tempo de vida
+9 - sistema autonomo
+12 - 4
+13 - ponto de demarcação
+16 - /24
 
