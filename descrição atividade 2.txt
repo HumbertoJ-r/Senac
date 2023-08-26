@@ -1,0 +1,30 @@
+na classe pacote de viagem 
+
+- calcular o total de hospedagem a partir do número de dias
+e o valor da diária
+
+1 - pegar a quantidade de dias this.quantDeDias * this.Hospedagem.getValorDiaria();
+2 - criar uma varivel para pegar o resulta -> double resultaldo = this.quantDeDias * this.Hospedagem.getValorDiaria();
+3 - retornar o valor do resultado = return resultado
+4 - o código final ficaria assim 
+
+public double calcularTotal (){
+ double resultado = this.quantDeDias * this.hospedagem.getValorDiaria();
+ return resultado
+}
+
+- calcular valor de lucro a partir de uma margem informada
+(porcentagem) e valor informardo. O resultado retornado deve
+ser o valor + margem aplicada ao valor. 
+
+fazer uma operação que multiplique 0,10 * o resultado e some lucro + resultado
+igual a valorFinal return valorFinal 
+criar uma variavel lucro 10%
+criar uma variavel dolar 1 = R$ 4,88
+
+
+- calcular e retornar o total do pacote, somado o transporte, o 
+total da hospedagem e os valores adicionais informados - margem de
+lucro e taxas adicionais 
+
+parei no minuto 50
