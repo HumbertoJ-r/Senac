@@ -6,6 +6,7 @@ public class Venda {
     private String nomeCliente;
     private String formaDePagamento;
     PacoteDeViagem pteDeViagem;
+    private double dolar = 4.98;
 
     public Venda(){
         
@@ -15,6 +16,16 @@ public class Venda {
         this.nomeCliente = nomeCliente;
         this.formaDePagamento = formaDePagamento;
         this.pteDeViagem = pteDeViagem;
+    }
+    
+    public double calcularConversao (){
+        double real = this.pteDeViagem.calcularTotalPacote / dolar;
+        return real;
+    }
+    
+    public double TotalPacote (){
+        System.out.println("Pacote valor em DOLAR: U$ " + this.pteDeViagem.calcularTotalPacote + "Pacote valor em REAL: R$ " + this.calcularConversao());
+        return 0;
     }
 
     public String getNomeCliente() {
