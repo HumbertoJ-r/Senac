@@ -5,7 +5,7 @@ package agenciadeviagem;
 public class Transporte {
     private String tipo; 
     private double valor; 
-    
+        
     public Transporte (){
         
     }
