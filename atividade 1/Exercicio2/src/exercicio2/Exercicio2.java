@@ -1,8 +1,10 @@
-package atividade1.pkg1;
+
+package exercicio2;
 
 import java.util.Scanner;
 
-public class Atividade2 {
+
+public class Exercicio2 {
 
     public static void main(String[] args) {
         String Cliente1;
@@ -35,5 +37,7 @@ public class Atividade2 {
         if (Idade2 > 60) {
             System.out.println(Cliente2 + " tem um desconto de 40%.");
         }
+        
     }
+    
 }
