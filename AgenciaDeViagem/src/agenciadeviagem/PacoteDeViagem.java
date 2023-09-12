@@ -4,48 +4,22 @@ package agenciadeviagem;
 
 public class PacoteDeViagem {
     Transporte transporte;
-    Hospedagem hospedagem;
+    Hospedagem hosp;
     private String destino;
     private int quantDeDias;
-    double calcularTotalPacote;
-    
+    private double taxasAdicionais = 0.0;
+    private double margemLucro = 0.0;
     
     public PacoteDeViagem (){
         
     }
 
-    public PacoteDeViagem(Transporte transporte, Hospedagem hospedagem, String destino, int quantDeDias) {
+    public PacoteDeViagem(Transporte transporte, Hospedagem hosp, String destino, int quantDeDias) {
         this.transporte = transporte;
-        this.hospedagem = hospedagem;
+        this.hosp = hosp;
         this.destino = destino;
         this.quantDeDias = quantDeDias;
     }
-    
-    public void setQuantDeDias(int quantDeDias) {
-        this.quantDeDias = quantDeDias;
-    }
-    
-    public double calcularTotalHospedagem  (){
-        double resultado = this.quantDeDias * this.hospedagem.getValorDiaria();
-        return resultado;
-    }
-    
-    // Método para calcular o valor do lucro com base na margem informada (porcentagem) e valor informado
-    public double calcularLucro (double margemLucro, double valorInformado){
-        double lucro = valorInformado * (1 + margemLucro /100);
-        return lucro;
-    }
-    
-        
-    // Método para calcular o total do pacote
-    public double calcularTotalPacote(double margemLucro, double taxasAdicionais) {
-        double totalHospedagem = calcularTotalHospedagem();
-        double lucro = calcularLucro(margemLucro, totalHospedagem + this.transporte.getValor());
-        return this.transporte.getValor() + totalHospedagem + lucro + taxasAdicionais;
-    }
- 
-   
-    
 
     public Transporte getTransporte() {
         return transporte;
@@ -56,11 +30,11 @@ public class PacoteDeViagem {
     }
 
     public Hospedagem getHospedagem() {
-        return hospedagem;
+        return hosp;
     }
 
-    public void setHospedagem(Hospedagem hospedagem) {
-        this.hospedagem = hospedagem;
+    public void setHospedagem(Hospedagem hosp) {
+        this.hosp = hosp;
     }
 
     public String getDestino() {
@@ -73,5 +47,44 @@ public class PacoteDeViagem {
 
     public int getQuantDeDias() {
         return quantDeDias;
-    }   
+    }
+
+    public void setQuantDeDias(int quantDeDias) {
+        this.quantDeDias = quantDeDias;
+    }
+
+    public double getTaxasAdicionais() {
+        return taxasAdicionais;
+    }
+
+    public void setTaxasAdicionais(double taxasAdicionais) {
+        this.taxasAdicionais = taxasAdicionais;
+    }
+
+    public double getMargemLucro() {
+        return margemLucro;
+    }
+
+    public void setMargemLucro(double margemLucro) {
+        this.margemLucro = margemLucro;
+    }
+
+    
+    
+    public double calcularHospedagem (){
+        double resultado = this.quantDeDias * this.hosp.getValorDiaria();
+        return resultado;
+    }
+    
+    public double calcularLucro (){
+        return margemLucro * calcularHospedagem () / 100;
+    }          
+    
+    public double calcularTotalPacote() {
+        double totalHospedagem = calcularHospedagem();
+        double totalPacote = totalHospedagem + calcularLucro() + taxasAdicionais;
+        return totalPacote;
+    }
+    
+        
 }
