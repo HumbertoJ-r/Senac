@@ -1,33 +1,32 @@
-
 package agenciadeviagem;
 
 public class Venda {
-    
+
     private String nomeCliente;
     private String formaDePagamento;
     PacoteDeViagem pteDeViagem;
-    double dolar = 4.98;
-
-    public Venda(){
-        
-    }
     
-    public Venda(String nomeCliente, String formaDePagamento, PacoteDeViagem pteDeViagem, double dolar) {
+
+    public Venda() {
+
+    }
+
+    public Venda(String nomeCliente, String formaDePagamento, PacoteDeViagem pteDeViagem) {
         this.nomeCliente = nomeCliente;
         this.formaDePagamento = formaDePagamento;
         this.pteDeViagem = pteDeViagem;
-        this.dolar = dolar;
+        
     }
-    
-    public double valorReais (double dolar){
-        return this.pteDeViagem.calcularTotalPacote() * dolar;
+
+    public double valorReais() {
+        return this.pteDeViagem.calcularTotalPacote() * 4.98;
     }
-    
-    public void mostrarInformacoesPte(){
-        System.out.println("Valor do pacote em dolar : " + this.pteDeViagem.calcularTotalPacote());
-        System.out.println("Valor do pacote em reais: ");
+
+    public void mostrarInformacoesPte() {
+        System.out.println("Valor do pacote em dolar : U$ " + this.pteDeViagem.calcularTotalPacote());
+        System.out.println("Valor do pacote em reais: R$ " + (String.format("%.2f",this.valorReais())));
     }
-    
+
     public String getNomeCliente() {
         return nomeCliente;
     }
@@ -51,5 +50,5 @@ public class Venda {
     public void setPteDeViagem(PacoteDeViagem pteDeViagem) {
         this.pteDeViagem = pteDeViagem;
     }
-    
+
 }

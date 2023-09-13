@@ -14,11 +14,13 @@ public class PacoteDeViagem {
         
     }
 
-    public PacoteDeViagem(Transporte transporte, Hospedagem hosp, String destino, int quantDeDias) {
+    public PacoteDeViagem(Transporte transporte, Hospedagem hosp, String destino, int quantDeDias, double margemLucro, double taxasAdicionais) {
         this.transporte = transporte;
         this.hosp = hosp;
         this.destino = destino;
         this.quantDeDias = quantDeDias;
+        this.margemLucro = margemLucro;
+        this.taxasAdicionais = taxasAdicionais;
     }
 
     public Transporte getTransporte() {
@@ -82,7 +84,7 @@ public class PacoteDeViagem {
     
     public double calcularTotalPacote() {
         double totalHospedagem = calcularHospedagem();
-        double totalPacote = totalHospedagem + calcularLucro() + taxasAdicionais;
+        double totalPacote = totalHospedagem + calcularLucro() + taxasAdicionais + this.transporte.getValor();
         return totalPacote;
     }
     
