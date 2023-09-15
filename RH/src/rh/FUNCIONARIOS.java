@@ -1,14 +1,14 @@
 
 package rh;
 
-public abstract class FUNCIONARIOS {
+public abstract class Funcionarios {
     
 private String Nome;
 private String Cpf;
 private String Endereco;
 private String Telefone;
 
-    public FUNCIONARIOS(String Nome, String Cpf, String Endereco, String Telefone) {
+    public Funcionarios(String Nome, String Cpf, String Endereco, String Telefone) {
         this.Nome = Nome;
         this.Cpf = Cpf;
         this.Endereco = Endereco;
