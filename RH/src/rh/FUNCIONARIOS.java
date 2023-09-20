@@ -1,52 +1,37 @@
 
 package rh;
 
-public abstract class Funcionarios {
+public abstract class funcionarios {
     
 private String Nome;
 private String Cpf;
 private String Endereco;
 private String Telefone;
+private String Setor;
 
-    public Funcionarios(String Nome, String Cpf, String Endereco, String Telefone) {
+
+    public funcionarios(String Nome, String Cpf, String Endereco, String Telefone, String Setor) {
         this.Nome = Nome;
         this.Cpf = Cpf;
         this.Endereco = Endereco;
         this.Telefone = Telefone;
+        this.Setor = Setor;
     }
 
-    public String getNome() {
-        return Nome;
+   public abstract double calcularSalario();
+   
+   public void mostrarDados() {
+       System.out.println("Nome " + Nome);
+       System.out.println("CPF " + Cpf);
+       System.out.println("Endereco " + Endereco);
+       System.out.println("Telefone " + Telefone);
+       System.out.println("Setor " + Setor);
     }
-
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-
-    public String getCpf() {
-        return Cpf;
-    }
-
-    public void setCpf(String Cpf) {
-        this.Cpf = Cpf;
-    }
-
-    public String getEndereco() {
-        return Endereco;
-    }
-
-    public void setEndereco(String Endereco) {
-        this.Endereco = Endereco;
-    }
-
-    public String getTelefone() {
-        return Telefone;
-    }
-
-    public void setTelefone(String Telefone) {
-        this.Telefone = Telefone;
-    }
-
+   
+   public double aplicarAumento(double percentualAumento) {
+        double valorAumento = (percentualAumento / 100) * this.calcularSalario();
+        return valorAumento;           
+   }
 
     
 }
