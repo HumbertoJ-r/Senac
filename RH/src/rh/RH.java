@@ -13,7 +13,7 @@ public class RH {
        Scanner scanner = new Scanner (System.in);
        List<funcionarios> funcionarios = new ArrayList();
        
-       for (int i = 0; i < 2; i++) {
+       for (int i = 0; i < 10; i++) {
            System.out.println("Digite o tipo do funcionario (Assalariado/Horista) ");
            String tipo = scanner.nextLine();
            
@@ -49,24 +49,25 @@ public class RH {
                scanner.nextLine();
                funcionarios.add(new Horistas(nome, cpf, endereco, telefone, setor, horasTrabalhadas, valorHoras));
            }
-       }        
+       }
+       System.out.println("=====================================");
        System.out.println("Dados dos funcionarios: ");
        for (funcionarios funcionario : funcionarios) {
            funcionario.mostrarDados();
-           System.out.println("Salario: " + funcionario.calcularSalario());
-           System.out.println();
+           System.out.println("Salario: " + funcionario.calcularSalario());          
+           System.out.println("=====================================");
        }
        
        System.out.println("Digite o percentual de aumento: ");
        double percentualAumento = scanner.nextDouble ();
        for (funcionarios funcionario : funcionarios){
-           funcionario.aplicarAumento();
+           
        }
         
        System.out.println("Dados dos funcionarios apos o aumento: ");
            for (funcionarios funcionario : funcionarios){
            funcionario.mostrarDados();
-           System.out.println("Salario apos aumento: " + funcionario.aplicarAumento());
+           funcionario.aplicarAumento(percentualAumento);
            System.out.println();
        }
     }
