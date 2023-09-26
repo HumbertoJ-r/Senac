@@ -1,0 +1,6 @@
+Em sua terceira questão você usa um valor de diária padrão, porém esse valor deve ser informado pelo usuário. - OK
+
+Na questão quatro, ao escolher a opção sair não é necessário confirmar a saída.- OK
+
+E por fim, na questão 5 ao informar um andar ou quarto invalido seu programa é interrompido, outro detalhe é que a exibição dos quartos deve estar 
+no formato de tabela, para isso sugiro a utilização de uma matriz. - OK

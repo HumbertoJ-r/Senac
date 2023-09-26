@@ -13,27 +13,37 @@ public class Atividade3 {
         Scanner entrada = new Scanner (System.in);
         
         String nome = "";
-        int contMeia = 0, contGratis = 0, idade, valorMeia = 75, valorPadrao = 150, soma = 0, contPadrao = 0; 
-        int total = 0; int totalPadrao = 0;
+        int contMeia = 0;
+        int  contGratis = 0, idade;
+        double  soma = 0;
+        int contPadrao = 0; 
+        double valorMeia;
+        double valorPadrao;
+        double total = 0; 
+        double totalPadrao = 0;
         
-        System.out.println("R$" + valorPadrao + ", valor padrao da diaria.");
+        System.out.println("Por favor informe o valor da Diaria: ");
+        valorPadrao = entrada.nextDouble();
+        System.out.println("O valor padrao da diaria e R$" + valorPadrao);
+        entrada.nextLine();
+        valorMeia = valorPadrao /2;
         
         while (!nome.equals("PARE")) {
-            System.out.println("\nNome do hospede: ");
+            System.out.println("Nome do hospede ou 'PARE' para terminar: ");
             nome = entrada.nextLine();
             
             if (nome.equals("PARE")) {
                 break;
             } else {
-                System.out.println("\nDigite a idade do hospede: ");
+                System.out.println("Digite a idade do hospede: ");
                 idade = entrada.nextInt();
-                entrada.nextLine(); // Consumir a quebra de linha
+                entrada.nextLine(); 
                 
                 if (idade < 4 || idade > 80) {
                     if (idade < 4) {
-                        System.out.println(nome + ", cliente possui gratuidade");
+                        System.out.println(nome + ", cliente possui gratuidade.");
                     } else if (idade > 80) {
-                        System.out.println(nome + ", cliente paga meia");
+                        System.out.println(nome + ", cliente paga meia.");
                     }
                     
                     if (idade < 4) {

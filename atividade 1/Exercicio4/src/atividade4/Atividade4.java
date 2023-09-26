@@ -46,11 +46,8 @@ public class Atividade4 {
                     System.out.println("\nHospede " + pesquisar + " nao encontrado");
                 }
             } else if (opcao == '3') {
-                System.out.println("\nDeseja sair do programa. S/N: ");
-                sair = entrada.nextLine();
-                if (sair.toUpperCase().equals("S")) {
-                    saida = 'N';
-                }
+                System.out.println("Fim do programa!");
+                break;
             } else {
                 System.out.println("\nOpcao invalida.");
             }
