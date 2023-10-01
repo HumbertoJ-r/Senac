@@ -1,0 +1,6 @@
+com\mycompany\modulocontabil\Aliquota.class
+com\mycompany\modulocontabil\Impostos.class
+com\mycompany\modulocontabil\IPI.class
+com\mycompany\modulocontabil\PIS.class
+com\mycompany\modulocontabil\ModuloContabil.class
+com\mycompany\modulocontabil\Pagamentos.class
