@@ -1,77 +1,14 @@
 
 package com.mycompany.empresa;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Empresa {
 
     public static void main(String[] args) {
-        
-       import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-abstract class Funcionario {
-    private String nome;
-    private String cpf;
-    private String endereco;
-    private String telefone;
-    private String setor;
-
-    public Funcionario(String nome, String cpf, String endereco, String telefone, String setor) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.setor = setor;
-    }
-
-    public abstract double calcularSalario();
-
-    public void mostrarDados() {
-        System.out.println("Nome: " + nome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Endereço: " + endereco);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("Setor: " + setor);
-    }
-
-    public void aplicarAumento(double percentualAumento) {
-        // Implemente o aumento de salário aqui de acordo com o tipo de funcionário.
-    }
-}
-
-class Assalariado extends Funcionario {
-    private double salarioMensal;
-
-    public Assalariado(String nome, String cpf, String endereco, String telefone, String setor, double salarioMensal) {
-        super(nome, cpf, endereco, telefone, setor);
-        this.salarioMensal = salarioMensal;
-    }
-
-    @Override
-    public double calcularSalario() {
-        return salarioMensal;
-    }
-}
-
-class Horista extends Funcionario {
-    private double horasTrabalhadas;
-    private double valorHora;
-
-    public Horista(String nome, String cpf, String endereco, String telefone, String setor, double horasTrabalhadas, double valorHora) {
-        super(nome, cpf, endereco, telefone, setor);
-        this.horasTrabalhadas = horasTrabalhadas;
-        this.valorHora = valorHora;
-    }
-
-    @Override
-    public double calcularSalario() {
-        return horasTrabalhadas * valorHora;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
+    
         Scanner scanner = new Scanner(System.in);
         List<Funcionario> funcionarios = new ArrayList<>();
 
