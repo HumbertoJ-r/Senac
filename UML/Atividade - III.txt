@@ -1,0 +1,75 @@
+ATIVIDADE 3
+
+a empresa na qual você atua recebeu uma demanada para criação de um sistema para uma academia de musculação/crossfit que apresenta indicações de exercícios que podem ser divididos em várias categorias.
+utilize como base as categorias de corrida e musculação que possam ser divididas em exercícios de resistência ou velocidade.
+sabendo que os diferentes exercícios são representados por objetos, avalie qual das opções de padrão de projeto pode ser aplicada para esses código. cosidere como opções: observer, abtract, factory e state.
+
+atividade:
+
+escolha entre os três padrões de projetos apresentados o que melhor se aplica neste projeto e justifique sua escolha.
+implemente um código no netBeans (javaAnt) com a solução do desafio proposto.
+
+Para o caso apresentado, a aplicação do padrão de projeto mais adequado seria o **padrão de projeto Factory (Fábrica)**.
+
+**Justificativa:**
+
+O padrão Factory é útil quando temos uma superclasse com vários subtipos e queremos que o cliente seja independente dos tipos concretos, possibilitando a criação do objeto sem precisar especificar a classe exata do objeto que será criado. No contexto da academia de musculação/crossfit, onde diferentes exercícios são representados por objetos e têm categorias específicas, o padrão Factory pode ser empregado para criar objetos de diferentes tipos de exercícios, como corrida (dividida em resistência e velocidade) e musculação.
+
+Aqui está um exemplo simples de como isso poderia ser implementado em Java com o padrão Factory:
+
+```java
+// Interface para os tipos de exercícios
+interface Exercicio {
+    void realizar();
+}
+
+// Classes para os diferentes tipos de exercícios
+
+class ExercicioCorrida implements Exercicio {
+    @Override
+    public void realizar() {
+        System.out.println("Executando exercício de corrida...");
+    }
+}
+
+class ExercicioMusculacao implements Exercicio {
+    @Override
+    public void realizar() {
+        System.out.println("Executando exercício de musculação...");
+    }
+}
+
+// Fábrica para criar os objetos Exercicio
+class ExercicioFactory {
+    public Exercicio criarExercicio(String tipo) {
+        if (tipo.equalsIgnoreCase("corrida")) {
+            return new ExercicioCorrida();
+        } else if (tipo.equalsIgnoreCase("musculacao")) {
+            return new ExercicioMusculacao();
+        } else {
+            return null;
+        }
+    }
+}
+
+// Testando a fábrica
+public class Main {
+    public static void main(String[] args) {
+        ExercicioFactory fabrica = new ExercicioFactory();
+
+        // Criando exercícios usando a fábrica
+        Exercicio exercicio1 = fabrica.criarExercicio("corrida");
+        Exercicio exercicio2 = fabrica.criarExercicio("musculacao");
+
+        // Realizando os exercícios
+        exercicio1.realizar();
+        exercicio2.realizar();
+    }
+}
+```
+
+Esse código cria um sistema simples para gerar objetos de diferentes tipos de exercícios (corrida ou musculação) por meio de uma fábrica. A fábrica é responsável por instanciar o tipo de exercício desejado com base no tipo fornecido.
+
+Você pode criar subclasses específicas para diferentes tipos de exercícios e adicionar funcionalidades conforme necessário, mantendo a capacidade de criar novos tipos de exercícios sem afetar o código cliente.
+
+Espero que este exemplo ajude a ilustrar como o padrão Factory pode ser aplicado neste cenário. Lembre-se de adaptar o código conforme as necessidades e requisitos específicos do sistema da academia.

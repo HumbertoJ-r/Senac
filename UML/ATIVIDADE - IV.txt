@@ -1,0 +1,10 @@
+ATIVIDADE IV
+
+uma empresa de software está em uma convorrência para oferecer seu sistema a uma grande rede de atuação nacional para supermercados. Para isso, não basta simplemente que o sistema esteja testado e funcionando, ele precisa atender aos princípios do SOLID (princípio da responsabilidade única; princípio  do aberto/fechado; princípio da substituição de Liskov; princípio da segregação de interface; princípio da inversão de dependência), seguir propostas de lean da code (código enxuto) e evitar code smells (cheiros de código). Você deverá analisar e refatorar o código desenvolvido por outros membros da sua equipe, com base nos princípios requisitados.
+
+atividade baseado no princípio de responsabilidade única (S) do SOLID, refatore em sua máquina a classe ProdutoController do Projeto Supermercado, diposnível em Conteúdo > Material complementar.
+
+mesmo que o código esteja compilado, identifique e corrija
+* os métodos que estão "fedorentos"
+* os princípios do "S" do SOLID que foram violados.
+proponha melhorias no código do projeto no netBeans.
