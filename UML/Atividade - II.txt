@@ -1,0 +1,43 @@
+Métodos Ágeis != Rápido
+
+Waterfall (Cascata) x Scrum
+
+Waterfall
+
+- Coleta os requisitos 
+- Desenvolve documentação + digramas
+- Programa - desenvolve
+- Testa
+- Entrega
+
+Scrum 
+
+-> Sprints - Tempo pré-definido (definido pelo Scrum Master) para 
+desenvolver determinado(s) requisito(s)
+
+
+### Papéis da Equipe e Quantidade de Pessoas
+
+1. **Product Owner (PO):** 1 pessoa
+2. **Scrum Master:** 1 pessoa
+3. **Equipe de Desenvolvimento:** Entre 5 a 7 pessoas, incluindo desenvolvedores, analistas de sistemas e testadores.
+4. **Stakeholders:** Envolvidos, mas não ativamente na execução das tarefas.
+
+### Planejamento da Sprint e Sprint Backlog
+
+**Sprint Goal:** Desenvolver o sistema de gerenciamento de viagens para a empresa RodoSenac, contemplando pedidos de deslocamento, aprovação, diárias de hospedagem e pedidos de transporte.
+
+#### Tabela de Sprint Backlog:
+
+| Tarefa                                   | Descrição                                                                                                     | Responsável     |
+|------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------|
+| Elaborar e priorizar casos de uso        | Revisar os casos de uso, priorizando a funcionalidade mais crítica e necessária para a primeira entrega.        | Product Owner   |
+| Configurar ambiente de desenvolvimento   | Configurar o ambiente de desenvolvimento com ferramentas necessárias para o trabalho da equipe.               | Equipe Dev      |
+| Criar classe Colaborador                 | Desenvolver a classe Colaborador com atributos e métodos conforme especificado no diagrama de classes.        | Equipe Dev      |
+| Implementar pedidos de deslocamento      | Desenvolver a lógica de pedidos de deslocamento, incluindo aprovação e extensões para diárias e transporte.     | Equipe Dev      |
+| Criar diagrama de atividades             | Elaborar o diagrama de atividades para representar o fluxo de ações no sistema conforme as especificações.     | Equipe Dev      |
+| Testar funcionalidades                   | Realizar testes de unidade e integração para garantir que as funcionalidades estejam corretas e integradas.    | Equipe de Teste |
+| Revisão e ajustes                         | Revisar o código, fazer ajustes e melhorias com base no feedback obtido durante os testes e revisões.          | Equipe Dev      |
+| Preparar documentação                     | Preparar documentação de usuário e guias para o sistema desenvolvido.                                        | Equipe Dev      |
+
+Este Sprint Backlog é um exemplo simplificado e genérico. As tarefas podem variar conforme a complexidade e escopo específico do projeto. Cada tarefa deve ser atribuída a um membro da equipe responsável por sua execução. Durante o planejamento da sprint, a equipe deve se comprometer com as tarefas atribuídas e a sprint goal.

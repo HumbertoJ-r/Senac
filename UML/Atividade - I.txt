@@ -1,0 +1,101 @@
+desenvolvimento != código 
+
+- programação
+- planejamento 
+- levantamento de requisitos 
+- tipos de tecnologia
+- design 
+- ux e ui
+- banco de dados ...
+
+UML (unified modeling language) - LINGUAGEM DE MODELAGEM UNIFICADA
+
+
+ATIVIDADE 1 - MATERIAL DE UML 
+
+1 - UM CASO DE USO 
+
+- ATOR FUNCIONÁRIO - OK
+- PEDIDO DE DESLOCAMENTO - OK 
+- RESSARCIMENTO PELO VALOR DA PASSAGEM DE ÔNIBUS (INCLUIR) - OK
+- MEIO DE TRANSPORTE (EXTENDER) - OK
+
+
+2 - DOIS DIGRAMAS DE DE CLASSES
+
+
+
+3 - UM DIAGRAMA DE ATIVIDADES 
+
+- PEDIDO DE DESLOCAMENTO
+- DIÁRIA 
+- TRANSPORTE 
+
+EXEMPLO DO CASO I - ATIVIDADE I -
+
+-> CADASTRAR HÓSPEDE
+
+- GERENTE 
+- RECEPCIONISTA
+
+-> ALOCAR HÓSPEDE AO QUARTO
+
+- RECPCIONISTA
+
+-> RESERVAR ÁREA DE LAZER 
+
+- HÓSPEDE
+
+-> CHECK-OUT
+
+- FINANCEIRO
+- RECEPCIONISTA
+----------------------------
+
+4 - ATORES
+
+3 - CLASSES 
+
+-----------------------------
+
+DICAS DE SITE PARA CRIAR DIAGRAMAS 
+
+DRAW.IO
+
+-----------------------------
+
+EXEMPLO EXERCÍCIO II - ATIVIDADE I - DIGRAMA DE CLASSES
+
+RECEPCIONISTA
+
+(ATRIBUTOS)
+- NOME: STRING 
+- CPF: STRING
+- IDADE: INT
+- MATRICULA: INT
+- TELEFONE: STRING
+------------------
+
+(METODOS)
++ cadastrarHospede(Hospede h): void
++ checkOut(): double
+
+obs: o sinal de (-) significa privado e o simbolo (+) significa público.
+---------------------------------
+
+EXEMPLOS DE CLASSES 
+PAGAMENTOS 
+VIAGEM 
+
+
+Diagrama de Classes:
+
+Classe: Colaborador
+
+Atributos: Nome, Cargo, PlacaCadastrada, PermissaoGerencia
+Métodos: PedirDeslocamento(), PedirDiariaHospedagem(), PedirTransporte()
+Classe: Viagem
+
+Atributos: DataPartida, DataRetorno, Destino, ValorDiaria, TipoTransporte
+Métodos: CalcularDiaria(), CalcularTransporte()
+Relacionamento Agregação: Colaborador possui Viagem
