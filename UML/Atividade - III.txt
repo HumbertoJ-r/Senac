@@ -1,8 +1,10 @@
 ATIVIDADE 3
 
-a empresa na qual você atua recebeu uma demanada para criação de um sistema para uma academia de musculação/crossfit que apresenta indicações de exercícios que podem ser divididos em várias categorias.
+a empresa na qual você atua recebeu uma demanada para criação de um sistema para uma academia de musculação/crossfit que apresenta indicações de exercícios que podem 
+ser divididos em várias categorias.
 utilize como base as categorias de corrida e musculação que possam ser divididas em exercícios de resistência ou velocidade.
-sabendo que os diferentes exercícios são representados por objetos, avalie qual das opções de padrão de projeto pode ser aplicada para esses código. cosidere como opções: observer, abtract, factory e state.
+sabendo que os diferentes exercícios são representados por objetos, avalie qual das opções de padrão de projeto pode ser aplicada para esses código. cosidere como 
+opções: observer, abtract, factory e state.
 
 atividade:
 
@@ -13,7 +15,10 @@ Para o caso apresentado, a aplicação do padrão de projeto mais adequado seria
 
 **Justificativa:**
 
-O padrão Factory é útil quando temos uma superclasse com vários subtipos e queremos que o cliente seja independente dos tipos concretos, possibilitando a criação do objeto sem precisar especificar a classe exata do objeto que será criado. No contexto da academia de musculação/crossfit, onde diferentes exercícios são representados por objetos e têm categorias específicas, o padrão Factory pode ser empregado para criar objetos de diferentes tipos de exercícios, como corrida (dividida em resistência e velocidade) e musculação.
+O padrão Factory é útil quando temos uma superclasse com vários subtipos e queremos que o cliente seja independente dos tipos concretos, possibilitando a criação 
+do objeto sem precisar especificar a classe exata do objeto que será criado. No contexto da academia de musculação/crossfit, onde diferentes exercícios são 
+representados por objetos e têm categorias específicas, o padrão Factory pode ser empregado para criar objetos de diferentes tipos de exercícios, como corrida 
+(dividida em resistência e velocidade) e musculação.
 
 Aqui está um exemplo simples de como isso poderia ser implementado em Java com o padrão Factory:
 
@@ -73,3 +78,27 @@ Esse código cria um sistema simples para gerar objetos de diferentes tipos de e
 Você pode criar subclasses específicas para diferentes tipos de exercícios e adicionar funcionalidades conforme necessário, mantendo a capacidade de criar novos tipos de exercícios sem afetar o código cliente.
 
 Espero que este exemplo ajude a ilustrar como o padrão Factory pode ser aplicado neste cenário. Lembre-se de adaptar o código conforme as necessidades e requisitos específicos do sistema da academia.
+
+
+
+package senacgym;
+
+import java.util.Scanner;
+
+public class SenacGym {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        fabricaExercicios fabrica = new fabricaExercicios();
+
+        System.out.println("Escolha o tipo de exercício (corrida ou musculacao): ");
+        String tipo = scanner.nextLine(); // Lê a escolha do usuário
+
+        exercicios exercicioEscolhido = fabrica.criarExercicio(tipo);
+
+        if (exercicioEscolhido != null) {
+            exercicioEscolhido.realizar(); // Realiza o exercício selecionado
+        } else {
+            System.out.println("Tipo de exercício inválido. Escolha entre corrida ou musculacao.");
+        }
+    }
+}
