@@ -1,0 +1,10 @@
+COMANDOS WINDOWS 
+
+COMMAND PROMPT: cmd.exe
+POWERSHELL: powershell.exe
+alguns comandos do powershell são chamados de "alias" para comandos comuns em outros shells.
+alias é um apelido de comando 
+
+PowerShell comandos:
+
+Is C:\ -> serve para listar arquivos que estão na pasta
