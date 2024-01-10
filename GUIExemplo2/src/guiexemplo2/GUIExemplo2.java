@@ -23,27 +23,29 @@ public class GUIExemplo2 {
 
         //Adicionar um ouvinte de ação ao botão
         botao.addActionListener(
-                new ActionListenner() {
-            private static class ActionListenner implements ActionListener {
-
-        public ActionListenner() {
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            String nome = input.getText();
-                if (nome.equalsIgnoreCase("Junior")) {
+               new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nome = input.getText();
+                if (nome.equalsIgnoreCase("Junior")){
                     JOptionPane.showMessageDialog(null, "Olá Tutor " + nome + ".", "Boas-vindas!", 1);
-                } else if (nome.isBlank()) {
-                    JOptionPane.showMessageDialog(null, "Nome inválido!", "Erro!", 0);
-                } else {
-                    JOptionPane.showConfirmDialog(null, "Olá, Aluno " + nome + ".", "Boas-vindas", 1);
+                } else if (nome.isBlank()){
+                   JOptionPane.showMessageDialog(null, "Nome Inválido", "Erro!", 0);
+                 } else {
+                    JOptionPane.showConfirmDialog(null, "Olá aluno " + nome + ".", "Boas-vindas!", 1);
                 }
             }
-        }
-            }
-        );}
 
-    
-
+});
+        painel.add(texto);
+        painel.add(input);
+        painel.add(botao);
+        telaPrincipal.add(painel);
+        
+        telaPrincipal.setVisible(true);
+        telaPrincipal.setSize(800,600);
+        telaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        telaPrincipal.pack();
+    }
 }
+
