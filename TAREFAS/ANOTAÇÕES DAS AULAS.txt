@@ -170,3 +170,46 @@ listar pedido
 criar o botão de sair 
 btnSair
 dispose();
+
+11/01/2024 - QUINTA 
+
+criando combo box 
+selecione uma opção:
+não
+bancon
+cebola 
+calarasa 
+bife exta
+batata frita 
+catupiry
+4 queijos 
+comboAdicional 
+
+criar uma classe pedido
+
+packege guibuilder;
+public class Pedido {
+
+	private int id;
+	private String nomeCliente;
+	private double preco;
+	private int quantidade;
+	private String acompanhamento;
+	private String adicional;
+	
+	public Pedido() {
+	
+	}
+	
+	public Pedido (int id, String nomeCliente, double preco, int quantidade, String acompanhamento, String adicional);
+		this.id = id;
+		this.nomeCliente = nomeCliente;
+		this.preco = preco;
+		this.quantidade = quantidade;
+		this.acompanhamento = acompanhamento;
+		this.adicional = adicional;
+		
+	}
+	
+	Get e Set
+}

@@ -40,6 +40,7 @@ public class CadastrarPedido extends javax.swing.JFrame {
         rdnSim = new javax.swing.JRadioButton();
         rdnNao = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         txtNomeCliente = new javax.swing.JLabel();
         txtPreco = new javax.swing.JLabel();
         txtQuantidade = new javax.swing.JLabel();
@@ -113,6 +114,8 @@ public class CadastrarPedido extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -134,7 +137,9 @@ public class CadastrarPedido extends javax.swing.JFrame {
                         .addComponent(fieldQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(txtAdicional)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtAdicional)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(93, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -152,13 +157,14 @@ public class CadastrarPedido extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAcompanhamento)
                     .addComponent(txtAdicional))
-                .addGap(20, 20, 20)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdnSim)
-                    .addComponent(rdnNao))
+                    .addComponent(rdnNao)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         txtNomeCliente.setText("Nome do Cliente:");
@@ -256,6 +262,7 @@ public class CadastrarPedido extends javax.swing.JFrame {
     private javax.swing.JTextField fieldPreco;
     private javax.swing.JTextField fieldQuantidade;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel painel1;
     private javax.swing.JRadioButton rdnNao;
