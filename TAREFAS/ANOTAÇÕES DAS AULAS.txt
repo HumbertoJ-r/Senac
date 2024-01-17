@@ -213,3 +213,71 @@ public class Pedido {
 	
 	Get e Set
 }
+
+
+17/01/2024 - QUARTA
+
+Trabalhar na listar pedidos
+
+criar tabela 
+tabela pedidos 
+
+criar botão 
+Novo Pedido 
+Excluir Pedido
+Atualizar Pedido
+
+btnNovoPedido
+btnExcluirPedido
+btnAtualizarPedido
+
+criar classe ListaPedido
+
+packege quibuilder;
+
+import java.util.ArrayList;
+
+public class ListaPedido {
+	public static ArrayList<Pedido> lista = new ArrayList<Pedido>();
+	
+	public static void adicionar(Pedido p){
+	
+		//Execeções
+		try {
+			//Se tudo der certo
+			//Validações 
+		if(p.getNomeCliente().isBlank() || p.getNomeCliente().isEmpty()
+			||p.getPreco() <=0 ||p.getQuantidade() <=0 || p.getAcompanhamento().isBlank||
+			||p.getAcompanhamento().isEmpty() || p.getAdicional().isBlank() || p.getAdicional().isEmpty());
+			System.out.println("Produto possui um campo inválido");
+		}catch (Exception e){
+			//Se aldo der errado
+		}
+		
+		//validação
+		if(p.getNomeCliente().isBlank() || p.getNomeCliente().isEmpty()
+			|| p.getPreco() <= 0 || p.getQuantidade() <=0 || p.getAcompanhamento().isBlank()
+			|| p.getAcompanhamento().isEmpty() || p.getAdicional().isBlank() || p.getAcional().isEmpty()){
+		System.out.println("Produto possui um campo inválido");
+	}else {
+		lista.add(p);
+		System.out.println("Produto adicionado na lista");
+	      }
+		
+	}
+}
+
+alterar no main para fazer o teste se está funcionando 
+
+packege guilbuilder;
+public class GUIBuilder {
+	public static void main (String [] args) {
+		//MenuPrincipal mp = new MenuPrincipal();
+		//mp.setVisible(true);
+
+		Pedido p = new Pedido();
+		ListaPedido.adicionar(p);
+	
+	}
+
+}
