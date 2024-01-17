@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package guibuilder;
 
-/**
- *
- * @author humbe
- */
+import javax.swing.JOptionPane;
+
+
 public class CadastrarPedido extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CadastrarPedido
-     */
     public CadastrarPedido() {
         initComponents();
     }
@@ -39,11 +32,18 @@ public class CadastrarPedido extends javax.swing.JFrame {
         fieldNomeCliente = new javax.swing.JTextField();
         rdnSim = new javax.swing.JRadioButton();
         rdnNao = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        btnCadastrar = new javax.swing.JButton();
+        comboAdicional = new javax.swing.JComboBox<>();
         txtNomeCliente = new javax.swing.JLabel();
         txtPreco = new javax.swing.JLabel();
         txtQuantidade = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        feedBackInformacoes = new javax.swing.JLabel();
+        feedBackNome = new javax.swing.JLabel();
+        feedBackPreco = new javax.swing.JLabel();
+        feedBackQuantidade = new javax.swing.JLabel();
+        feedBackAdicional = new javax.swing.JLabel();
+        feedBackAcompanhamento = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,9 +112,14 @@ public class CadastrarPedido extends javax.swing.JFrame {
         Acompanhamento.add(rdnNao);
         rdnNao.setText("Não ");
 
-        jButton1.setText("Cadastrar");
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAdicional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione uma opção:", "Não", "Bacon", "Celoba", "Calabresa", "Bife extra \t", "Catupiry", "4 Queijos ", " " }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -139,11 +144,11 @@ public class CadastrarPedido extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtAdicional)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(93, Short.MAX_VALUE))
+                            .addComponent(comboAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(60, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnCadastrar)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -161,10 +166,10 @@ public class CadastrarPedido extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdnSim)
                     .addComponent(rdnNao)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnCadastrar)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         txtNomeCliente.setText("Nome do Cliente:");
@@ -173,23 +178,71 @@ public class CadastrarPedido extends javax.swing.JFrame {
 
         txtQuantidade.setText("Quantidade:");
 
+        feedBackInformacoes.setText("Informações do pedido:");
+
+        feedBackNome.setText("Nome Cliente: ");
+
+        feedBackPreco.setText("Preço:");
+
+        feedBackQuantidade.setText("Quantidade:");
+
+        feedBackAdicional.setText("Adicional:");
+
+        feedBackAcompanhamento.setText("Acompanhamento:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(feedBackInformacoes)
+                    .addComponent(feedBackNome)
+                    .addComponent(feedBackPreco)
+                    .addComponent(feedBackQuantidade)
+                    .addComponent(feedBackAdicional)
+                    .addComponent(feedBackAcompanhamento))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(feedBackInformacoes)
+                .addGap(18, 18, 18)
+                .addComponent(feedBackNome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(feedBackPreco)
+                .addGap(18, 18, 18)
+                .addComponent(feedBackQuantidade)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(feedBackAcompanhamento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(feedBackAdicional)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(painel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(txtNomeCliente)
+                        .addGap(79, 79, 79)
+                        .addComponent(txtPreco)
+                        .addGap(98, 98, 98)
+                        .addComponent(txtQuantidade)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(txtNomeCliente)
-                .addGap(79, 79, 79)
-                .addComponent(txtPreco)
-                .addGap(98, 98, 98)
-                .addComponent(txtQuantidade)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,8 +254,10 @@ public class CadastrarPedido extends javax.swing.JFrame {
                     .addComponent(txtPreco)
                     .addComponent(txtQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -220,6 +275,33 @@ public class CadastrarPedido extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldNomeClienteActionPerformed
 
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        Pedido p = new Pedido();
+        p.setNomeCliente(fieldNomeCliente.getText());
+        
+        p.setPreco(Double.parseDouble(fieldPreco.getText()));
+        
+        p.setQuantidade(Integer.parseInt(fieldQuantidade.getText()));
+        
+        if(rdnSim.isSelected()){
+            p.setAcompanhamento("Sim");
+        }else if (rdnNao.isSelected()){
+            p.setAcompanhamento("Não");
+        }else {
+            p.setAcompanhamento("");
+        }
+        
+        p.setAdicional(comboAdicional.getSelectedItem().toString());
+       
+        JOptionPane.showMessageDialog(null,"Pedido cadastrado com Sucesso!");
+        
+        feedBackNome.setText("Nome do Cliente: " + p.getNomeCliente());
+        feedBackPreco.setText("Preço: " + p.getPreco());
+        feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());
+        feedBackAcompanhamento.setText("Acompanhamento? " + p.getAcompanhamento());
+        feedBackAdicional.setText("Adicional? " + p.getAdicional());
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+        
     /**
      * @param args the command line arguments
      */
@@ -257,13 +339,20 @@ public class CadastrarPedido extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Acompanhamento;
+    private javax.swing.JButton btnCadastrar;
     private java.awt.Button btnSair;
+    private javax.swing.JComboBox<String> comboAdicional;
+    private javax.swing.JLabel feedBackAcompanhamento;
+    private javax.swing.JLabel feedBackAdicional;
+    private javax.swing.JLabel feedBackInformacoes;
+    private javax.swing.JLabel feedBackNome;
+    private javax.swing.JLabel feedBackPreco;
+    private javax.swing.JLabel feedBackQuantidade;
     private javax.swing.JTextField fieldNomeCliente;
     private javax.swing.JTextField fieldPreco;
     private javax.swing.JTextField fieldQuantidade;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel painel1;
     private javax.swing.JRadioButton rdnNao;
     private javax.swing.JRadioButton rdnSim;

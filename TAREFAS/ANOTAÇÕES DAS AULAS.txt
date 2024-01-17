@@ -213,3 +213,56 @@ public class Pedido {
 	
 	Get e Set
 }
+
+dia 15/01/2024
+
+fazer o botão cadastrar funcionar 
+
+private void btnCadastrarPedidoActionPerformed(java.awt.event.ActionEvent evt) {
+	Pedido p = new Pedido ();
+	p.setNomeCliente(fieldNomeCliente.getText());
+
+	//Convertendo a String do Textfield para um double
+	p.setPreco(Double.parseDouble(fieldPreco.getText());//parse
+
+	//Convertendo a String do Textfield para um int
+	p.setQuantidade(Integer.parseInt(fieldQuantidade.getTxt());//parse
+
+	//Manuseando a informação dos RadioButton
+	if (rdnSim.isSelected()){
+		p.setAcompanhamento("Sim");
+	}else if(rdnNao.isSelected()) {
+		p.setAcompanhamento("Não");
+	}else { 
+		p.setAcompnhamento("");
+	}
+
+	//Manusear a informação do comboBox
+	p.setAdicional(comboAdicional.getSelectItem().toString());
+	
+	JOptionPane.showMessageDialog(null, "Pedido cadastrado com Sucesso!");
+
+	feedBackNome.setText("Nome do cliente: " + p.getNomeCliente());
+	feedBackPreco.setText("Preço: " + p.getPreco());
+	feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());
+	feedBackAcompanhamento.setText("Acompanhamento? " + p.getAcompanhament());
+	feedBackAdicional.setText("Adicional? " + p.adicional());
+}
+
+
+criar um novo painel 
+criar um label 
+Informações do pedido:
+label 
+Nome Cliente:
+Preço:
+Quantidade:
+Acompanhamento:
+Adicional: 
+
+feedBackNome
+feedBackPreco
+feedBackQuantidade
+feedBackAdicional
+feedBackAcompanhamento
+
