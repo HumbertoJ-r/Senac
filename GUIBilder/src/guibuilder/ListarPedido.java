@@ -4,6 +4,8 @@
  */
 package guibuilder;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author humbe
@@ -30,10 +32,13 @@ public class ListarPedido extends javax.swing.JFrame {
         txtBemVindos = new javax.swing.JLabel();
         txtSelecione = new javax.swing.JLabel();
         btnSair = new java.awt.Button();
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        painel2 = new javax.swing.JPanel();
         btnNovoPedido = new javax.swing.JButton();
         btnExcluirPedido = new javax.swing.JButton();
         btnAtualizarPedido = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +55,44 @@ public class ListarPedido extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(montarTabela());
+        jScrollPane1.setViewportView(jTable1);
+
+        btnNovoPedido.setText("Novo Pedido");
+
+        btnExcluirPedido.setText("Excluir Pedido");
+        btnExcluirPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirPedidoActionPerformed(evt);
+            }
+        });
+
+        btnAtualizarPedido.setText("Atualizar Pedido");
+
+        javax.swing.GroupLayout painel2Layout = new javax.swing.GroupLayout(painel2);
+        painel2.setLayout(painel2Layout);
+        painel2Layout.setHorizontalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btnNovoPedido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addComponent(btnExcluirPedido)
+                .addGap(81, 81, 81)
+                .addComponent(btnAtualizarPedido)
+                .addGap(42, 42, 42))
+        );
+        painel2Layout.setVerticalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNovoPedido)
+                    .addComponent(btnExcluirPedido)
+                    .addComponent(btnAtualizarPedido))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout painel1Layout = new javax.swing.GroupLayout(painel1);
         painel1.setLayout(painel1Layout);
         painel1Layout.setHorizontalGroup(
@@ -57,13 +100,15 @@ public class ListarPedido extends javax.swing.JFrame {
             .addGroup(painel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(painel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painel1Layout.createSequentialGroup()
-                        .addComponent(txtSelecione)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1)
+                    .addComponent(painel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(painel1Layout.createSequentialGroup()
                         .addComponent(txtBemVindos, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painel1Layout.createSequentialGroup()
+                        .addComponent(txtSelecione)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         painel1Layout.setVerticalGroup(
@@ -78,42 +123,22 @@ public class ListarPedido extends javax.swing.JFrame {
                         .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(txtSelecione)
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
-
-        btnNovoPedido.setText("Novo Pedido");
-
-        btnExcluirPedido.setText("Excluir Pedido");
-        btnExcluirPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExcluirPedidoActionPerformed(evt);
-            }
-        });
-
-        btnAtualizarPedido.setText("Atualizar Pedido");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnNovoPedido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(btnExcluirPedido)
-                .addGap(30, 30, 30)
-                .addComponent(btnAtualizarPedido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovoPedido)
-                    .addComponent(btnExcluirPedido)
-                    .addComponent(btnAtualizarPedido))
-                .addContainerGap(107, Short.MAX_VALUE))
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,7 +148,7 @@ public class ListarPedido extends javax.swing.JFrame {
             .addComponent(painel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -131,8 +156,8 @@ public class ListarPedido extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(painel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(47, 47, 47))
         );
 
         pack();
@@ -181,13 +206,26 @@ public class ListarPedido extends javax.swing.JFrame {
         });
     }
 
+       private DefaultTableModel montarTabela(){
+        String[] colunas = {"ID", "Cliente", "Preço", "Quantidade", "Acompanhamento","Adicional"};
+        
+        DefaultTableModel tabela = new DefaultTableModel (colunas,0);
+        
+        return tabela;
+    }
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizarPedido;
     private javax.swing.JButton btnExcluirPedido;
     private javax.swing.JButton btnNovoPedido;
     private java.awt.Button btnSair;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel painel1;
+    private javax.swing.JPanel painel2;
     private javax.swing.JLabel txtBemVindos;
     private javax.swing.JLabel txtSelecione;
     // End of variables declaration//GEN-END:variables

@@ -1,8 +1,8 @@
-
 package guibuilder;
 
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
-
+import javax.swing.table.DefaultTableModel;
 
 public class CadastrarPedido extends javax.swing.JFrame {
 
@@ -120,6 +120,11 @@ public class CadastrarPedido extends javax.swing.JFrame {
         });
 
         comboAdicional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione uma opção:", "Não", "Bacon", "Celoba", "Calabresa", "Bife extra \t", "Catupiry", "4 Queijos ", " " }));
+        comboAdicional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboAdicionalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -277,31 +282,46 @@ public class CadastrarPedido extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         Pedido p = new Pedido();
-        p.setNomeCliente(fieldNomeCliente.getText());
-        
-        p.setPreco(Double.parseDouble(fieldPreco.getText()));
-        
-        p.setQuantidade(Integer.parseInt(fieldQuantidade.getText()));
-        
-        if(rdnSim.isSelected()){
-            p.setAcompanhamento("Sim");
-        }else if (rdnNao.isSelected()){
-            p.setAcompanhamento("Não");
-        }else {
-            p.setAcompanhamento("");
+
+        try {
+            p.setNomeCliente(fieldNomeCliente.getText());
+
+            p.setPreco(Double.parseDouble(fieldPreco.getText()));
+
+            p.setQuantidade(Integer.parseInt(fieldQuantidade.getText()));
+
+            if (rdnSim.isSelected()) {
+                p.setAcompanhamento("Sim");
+            } else if (rdnNao.isSelected()) {
+                p.setAcompanhamento("Não");
+            } else {
+                p.setAcompanhamento("");
+            }
+            if (comboAdicional.getSelectedItem().toString().equalsIgnoreCase("Selecione uma opção:")) {
+                p.setAdicional("");
+            } else {
+                p.setAdicional(comboAdicional.getSelectedItem().toString());
+            }
+
+            if (ListasDePedidos.adicionar(p)) {
+                JOptionPane.showMessageDialog(null, "Pedido cadastrado com Sucesso!");
+
+                feedBackNome.setText("Nome do Cliente: " + p.getNomeCliente());
+                feedBackPreco.setText("Preço: " + p.getPreco());
+                feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());
+                feedBackAcompanhamento.setText("Acompanhamento? " + p.getAcompanhamento());
+                feedBackAdicional.setText("Adicional? " + p.getAdicional());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Pedido não pode ser cadastrado");
+            System.out.println(e);
         }
-        
-        p.setAdicional(comboAdicional.getSelectedItem().toString());
-       
-        JOptionPane.showMessageDialog(null,"Pedido cadastrado com Sucesso!");
-        
-        feedBackNome.setText("Nome do Cliente: " + p.getNomeCliente());
-        feedBackPreco.setText("Preço: " + p.getPreco());
-        feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());
-        feedBackAcompanhamento.setText("Acompanhamento? " + p.getAcompanhamento());
-        feedBackAdicional.setText("Adicional? " + p.getAdicional());
     }//GEN-LAST:event_btnCadastrarActionPerformed
-        
+
+    private void comboAdicionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboAdicionalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboAdicionalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -336,7 +356,8 @@ public class CadastrarPedido extends javax.swing.JFrame {
             }
         });
     }
-
+    
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Acompanhamento;
     private javax.swing.JButton btnCadastrar;
