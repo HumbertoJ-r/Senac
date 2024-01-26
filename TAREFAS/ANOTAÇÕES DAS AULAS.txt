@@ -266,3 +266,344 @@ feedBackQuantidade
 feedBackAdicional
 feedBackAcompanhamento
 
+24/01/2024 -Quarta
+
+ArrayList<Pedido> lista = ListaDePedido.listar();
+
+//For para montar a linha na tabela
+for (int i =0; i <lista.size(); i++) {
+	Pedido p = lista.get(i);
+	String [] linha = {
+	Integer.ToString(p.getId()),
+	p.getNomeCliente(),
+	Double.toString(p.getPreco()),
+	Integer.toString(p.getQuantidade()),
+	p.getAcompanhamento(),
+	p.getAdicional());;
+	tabela.addRow(linha); //Não esquecer de adicionar a linha na tabela!
+}
+
+ return tabela;
+ 
+}
+
+
+Na classe ListaDePedidos
+
+else {
+	p.setId(lista.size() + 1;
+
+public static boolean excluir(int id){
+	try {
+	if(id <=0 ){
+		JOptionPane.showMessageDialog(null,"Selecione um item para excluir:");
+	} else {
+	lista.remove(id);
+	retunr true;
+} 
+} catch (Exception e) {
+	System.out.println("Ocorreu um erro ao excluir da lsita");
+}
+
+return false;
+
+}
+}
+
+JFrame lista de pedidos
+
+criar 
+
+private int getPosicao(){
+	int posicao = tabelaPedido.getSelectedRow();
+	
+	if(posicao <=0) {
+	JOpitonPane.showMessageDialog(null,"Selecione um item para excluir");
+}
+	return posicao;
+}
+
+ir para o botão excluir 
+
+ ListaPedido.excluir(getPosicao());
+
+
+Atividade II
+
+Criar um menu principal 
+com três botões 
+IMC
+Gasto Calorico
+Recomendações 
+alterar o nome para 
+btnIMC
+btnGastoCalorico
+btnRecomendações
+
+criar 
+JFrame
+IMC
+GastoCalorico
+Recomendações 
+
+JFrame IMC
+
+alterar font dos label 
+
+criar um label
+Cálculo de IMC
+
+criar dois panel 
+
+com dois label
+altura (m):
+peso (kg):
+
+alterar o nome
+lbnAltura
+lbnPeso
+
+dois textField
+altura
+peso
+
+alterar nome para 
+txtAltura
+txtPeso
+
+criar um botão 
+calcular 
+
+alterar o botão 
+colocar bodar 
+font arial black 14
+
+criar um outro panel
+
+criar dois label 
+resultado:
+interpretação:
+
+alterar 
+lbnResultadado 
+lbnInterpretação
+
+criar um botão de sair para voltar no menu principal 
+
+JFrame GastoCalorico
+
+criar label 
+Cálculo de Gasto Calórico
+altarar 
+txtCalculoGastoCalorico
+
+criar panel 
+criar dois botões 
+radio button
+mulher
+homem 
+alterar 
+radioButtonMulher
+radioButtonHomem
+criar button Group
+adicionar 
+radio button mulher
+radio button homem
+
+criar três labels
+
+peso (kg):
+altura (cm):
+idade:
+
+alterar para 
+txtpeso
+txtaltura
+txtidade
+
+criar uma list
+nível de atividade
+
+criar três textField
+peso
+altura
+idade
+
+alterar para 
+textFieldpeso
+textFieldAltura
+textFieldIdade
+
+criar um botão 
+calcular 
+
+alterar o botão 
+btnCalcular
+colocar bodar 
+font arial black 14
+
+criar um outro panel
+
+criar dois label 
+Gasto Basal:
+Gasto Total:
+
+alterar 
+txtGastoBasal
+txtGastoTotal
+
+criar um botão de sair para voltar no menu principal 
+
+sedentário
+leve (exercício leve 1 a 3 dias/semana)
+morado (exercício moderado 3 a 5 dias/semana)
+ativo (exercício pesado 5 a 6 dias/semana)
+extremamente ativo (exercício pesado diário)
+
+
+JFrame Recomendações
+
+Criar panel 
+
+Alterar
+paniel1
+
+Criar label 
+Recomendações 
+
+Alterar
+txtRecomendacoes
+
+Criar botão
+Sair
+
+Alterar
+btnSair
+
+Criar panel
+alterar
+paniel2
+
+Criar label
+calorias diarias (kcal):
+
+Alterar
+txtCaloriasDiarias
+
+Criar textField
+
+Alterar
+textFieldColoriasDiarias
+
+Criar botão
+Calcular
+
+Alterar
+btnCalcular
+
+criar panel
+criar label
+carboidratos (50%):
+Proteina (25%):
+Gordura (25%):
+
+Parte desing OK 
+
+Parte código 
+
+criar uma nova classe chamada cliente 
+
+double altura
+double peso
+int idade
+boolean sexo
+
+Cliente c = new Cliente();
+
+        try {
+            c.setAltura(Double.parseDouble(textfieldAltura.getText());
+
+            c.setPeso(Double.parseDouble(textfieldPeso.getText()));
+
+	    imc = peso/altura;
+
+            if (imc < = 18.5) {
+feedbackResultado.setText("Resultado: " + imc;
+
+
+
+(rdnMulher.isSelected()) {
+                p.setMulher("Mulher");
+            } else if (rdnHomem.isSelected()) {
+                p.setHomem("Homem");
+            } else {
+                p.setAcompanhamento("");
+            }
+            if (comboAdicional.getSelectedItem().toString().equalsIgnoreCase("Selecione uma opção:")) {
+                p.setAdicional("");
+            } else {
+                p.setAdicional(comboAdicional.getSelectedItem().toString());
+            }
+
+            if (ListasDePedidos.adicionar(p)) {
+                
+                feedBackNome.setText("Nome do Cliente: " + p.getNomeCliente());
+                feedBackPreco.setText("Preço: " + p.getPreco());
+                feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());
+                feedBackAcompanhamento.setText("Acompanhamento? " + p.getAcompanhamento());
+                feedBackAdicional.setText("Adicional? " + p.getAdicional());
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Pedido não pode ser cadastrado");
+            System.out.println(e);
+        }
+    }     
+                           
+25/01/2024 - quinta
+
+try {
+        // Verifica se os campos estão preenchidos
+        if (textFieldAltura.getText().isEmpty() || textFieldPeso.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, preencha todos os campos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return; // Encerra a execução se algum campo estiver vazio
+        }
+
+        // Preenche os atributos do cliente
+        c.setAltura(Double.parseDouble(textFieldAltura.getText()));
+        c.setPeso(Double.parseDouble(textFieldPeso.getText()));
+
+        // Calcula o IMC
+        double imc = c.getPeso() / Math.pow(c.getAltura(), 2);
+
+        // Exibe o resultado do IMC
+        JOptionPane.showMessageDialog(this, "Seu IMC é: " + String.format("%.2f", imc), "Resultado", JOptionPane.INFORMATION_MESSAGE);
+
+        // Determina a interpretação do IMC
+        String interpretacao = determinarInterpretacao(imc);
+
+        // Exibe a interpretação
+        labelResultado.setText("Resultado: " + interpretacao);
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, insira valores numéricos válidos.", "Erro", JOptionPane.ERROR_MESSAGE);
+    }
+}
+
+private String determinarInterpretacao(double imc) {
+    if (imc < 18.5) {
+        return "Magreza";
+    } else if (imc >= 18.5 && imc <= 24.9) {
+        return "Normal";
+    } else if (imc >= 25 && imc <= 29.9) {
+        return "Sobrepeso";
+    } else if (imc >= 30 && imc <= 39.9) {
+        return "Obesidade";
+    } else {
+        return "Obesidade grave";
+    }
+}
+
+Leve ( exercício leve 1 a 3 dias/semana)
+Moderado (exercício moderado 3 a 5 dias/semana)
+Ativo (exercício pesado 5 a 6 dias/semana)
+Extremamente Ativo ( exercício pesado diário)

@@ -304,8 +304,7 @@ public class CadastrarPedido extends javax.swing.JFrame {
             }
 
             if (ListasDePedidos.adicionar(p)) {
-                JOptionPane.showMessageDialog(null, "Pedido cadastrado com Sucesso!");
-
+                
                 feedBackNome.setText("Nome do Cliente: " + p.getNomeCliente());
                 feedBackPreco.setText("Preço: " + p.getPreco());
                 feedBackQuantidade.setText("Quantidade: " + p.getQuantidade());

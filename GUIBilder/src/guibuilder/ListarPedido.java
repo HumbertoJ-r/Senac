@@ -4,6 +4,8 @@
  */
 package guibuilder;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -33,7 +35,7 @@ public class ListarPedido extends javax.swing.JFrame {
         txtSelecione = new javax.swing.JLabel();
         btnSair = new java.awt.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelaPedido = new javax.swing.JTable();
         painel2 = new javax.swing.JPanel();
         btnNovoPedido = new javax.swing.JButton();
         btnExcluirPedido = new javax.swing.JButton();
@@ -55,8 +57,8 @@ public class ListarPedido extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(montarTabela());
-        jScrollPane1.setViewportView(jTable1);
+        tabelaPedido.setModel(montarTabela());
+        jScrollPane1.setViewportView(tabelaPedido);
 
         btnNovoPedido.setText("Novo Pedido");
 
@@ -168,7 +170,7 @@ public class ListarPedido extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnExcluirPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirPedidoActionPerformed
-        // TODO add your handling code here:
+        ListasDePedidos.excluir(getPosicao());
     }//GEN-LAST:event_btnExcluirPedidoActionPerformed
 
     /**
@@ -206,16 +208,34 @@ public class ListarPedido extends javax.swing.JFrame {
         });
     }
 
-       private DefaultTableModel montarTabela(){
-        String[] colunas = {"ID", "Cliente", "Preço", "Quantidade", "Acompanhamento","Adicional"};
-        
-        DefaultTableModel tabela = new DefaultTableModel (colunas,0);
-        
+    private DefaultTableModel montarTabela() {
+        String[] colunas = {"ID", "Cliente", "Preço", "Quantidade", "Acompanhamento", "Adicional"};
+
+        DefaultTableModel tabela = new DefaultTableModel(colunas, 0);
+
+        ArrayList<Pedido> lista = ListasDePedidos.listar();
+        for (int i = 0; i < lista.size(); i++) {
+            Pedido p = lista.get(i);
+            String[] linha = {Integer.toString(p.getId()),
+                p.getNomeCliente(), Double.toString(p.getPreco()),
+                Integer.toString(p.getQuantidade()), p.getAcompanhamento(),
+                p.getAdicional()};
+            tabela.addRow(linha);
+
+        }
         return tabela;
     }
 
+    private int getPosicao(){
+        int posicao = tabelaPedido.getSelectedRow();
+        
+        if(posicao<=0){
+            JOptionPane.showMessageDialog(null,"Selecione um item para excluir");
+        }
+        return posicao;
+    }
     
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizarPedido;
     private javax.swing.JButton btnExcluirPedido;
@@ -223,9 +243,9 @@ public class ListarPedido extends javax.swing.JFrame {
     private java.awt.Button btnSair;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel painel1;
     private javax.swing.JPanel painel2;
+    private javax.swing.JTable tabelaPedido;
     private javax.swing.JLabel txtBemVindos;
     private javax.swing.JLabel txtSelecione;
     // End of variables declaration//GEN-END:variables

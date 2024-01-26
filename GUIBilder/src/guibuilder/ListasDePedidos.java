@@ -21,8 +21,9 @@ public class ListasDePedidos {
             } else if (p.getQuantidade() <=0 ){
                 JOptionPane.showMessageDialog(null,"O campo quantidade não poder menor ou igual a zero!");
             } else {
+                p.setId(lista.size() + 1);
                 lista.add(p);
-                JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+                JOptionPane.showMessageDialog(null, "Peduto cadastrado com sucesso!");
                 return true;
             }
         } catch (Exception e) {
@@ -32,6 +33,22 @@ public class ListasDePedidos {
     }
     
     public static ArrayList<Pedido> listar(){
-        return lista;
+        
+            return lista;
+            
+  
+}
+      public static boolean excluir(int id){
+        try {
+            if (id <=0){
+                JOptionPane.showMessageDialog(null,"Selecione um intem para excluir.");
+            } else{
+                lista.remove(id);
+                return true;
+            }
+        } catch (Exception e){
+            System.out.println("Ocorreu um erro ao excluir da lista");
+        }
+        return false;
     }
 }
