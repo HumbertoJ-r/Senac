@@ -1,0 +1,121 @@
+Crie um projeto Java no NetBeans e implemente o sistema, que contará com as seguintes telas:
+
+Tela inicial, com a listagem de todas as consultas cadastradas em memória.
+
+O botão Nova Consulta leva à tela de cadastro de consulta. O botão Excluir Consulta exclui da
+lista o registro que estiver selecionado na tabela. O botão Finalizar Consulta leva à tela Detalhes
+da Consulta. Quando houver alguma ação de inclusão, exclusão ou finalização de consulta, a
+tabela sempre deve ser atualizada.
+
+2. Tela de cadastro da consulta.
+
+Validar formato de CPF
+Validar formato de data
+Validar formato de telefone
+Não permitir cadastro sem informar nome, CPF, telefone e data da consulta
+
+
+Ao clicar em Cadastrar, deve-se incluir novo registro na lista em memória e fechar a janela.
+
+3. Tela de detalhes e finalização da consulta.
+
+
+Ao clicar no botão Finalizar, essa tela deve tornar-se visível. Será necessário um atributo na
+classe dessa tela para que você possa repassar a informação de qual consulta está selecionada e,
+neste caso, preencher esse atributo antes ou logo após abrir a janela.
+Nessa tela, a checkbox Consulta Realizada deve ser marcada automaticamente, se a consulta já
+está como realizada, e não ficar disponível para o usuário alterar (modo enabled falso).
+O campo Receita e observações é de texto livre. Nele, o nutricionista pode informar o histórico da
+consulta, por exemplo.
+O botão Finalizar deve ficar visível apenas se a consulta ainda não foi realizada. Quando clicado,
+registrará o texto digitado na consulta, atualizando-a para “já realizada”. Não se deve permitir a
+finalização sem um texto digitado na caixa de observações.
+Crie as classes necessárias para a implementação dessas regras. Toda a aplicação deve usar
+uma estrutura de dados em memória para seu funcionamento. Observe o uso de tratamento de
+exceção para evitar quebra do programa.
+
+
+botões
+
+nova consulta 
+excluir consulta 
+finalizar consulta 
+
+alterar os nomes do Jframe
+
+criar painel 
+
+label 
+cadastrar consulta
+nome do(a) paciente:
+telefone:
+CPF:
+data da consulta: 
+
+textField
+
+nomepaciente
+telefone
+cpf
+dataconsulta
+
+botão 
+cadastrar
+
+botão já é paciente
+
+criar um painel 
+
+label 
+
+detalhes da consulta 
+
+chelist consulta realizada 
+Receita e observações:
+text
+botão finalizar 
+bottão sair 
+
+
+dados pacietne
+
+nome paciente
+telefone
+cpf
+dataconsulta
+já é paciente
+consulta realizada
+
+
+/**
+     *
+     * @return
+     */
+        
+
+        /*public DefaultTableModel criarTabela(){
+        
+        String[] colunas = {"ID", "Paciente", "CPF", "Telefone", "Data", "Já era Paciente", "Consulta Realizada"};
+        
+        //Criamos a tabela "na mão"
+        DefaultTableModel tabela = new DefaultTableModel(colunas, 0);
+        
+        //Pegar os dados da lista de produtos
+        ArrayList<Paciente> lista = ListaPaciente.listar();
+        
+        //FOR para MONTAR A LINHA na tabela
+        for (int i = 0; i < lista.size(); i++) {
+            Paciente p = lista.get(i);
+            String [] linha = {
+                Integer.toString(p.getId()),
+                p.getNomePaciente(),
+                Double.toString(p.getTelefone()),
+                p.getCpf(),
+                p.getDataConsulta(),
+                
+            };
+            tabela.addRow(linha); //Não esquecer de adicionar a linha na tabela!
+        }
+        
+        return tabela;
+    }*/

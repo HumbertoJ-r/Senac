@@ -61,6 +61,11 @@ public class ListarPedido extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tabelaPedido);
 
         btnNovoPedido.setText("Novo Pedido");
+        btnNovoPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoPedidoActionPerformed(evt);
+            }
+        });
 
         btnExcluirPedido.setText("Excluir Pedido");
         btnExcluirPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -172,6 +177,11 @@ public class ListarPedido extends javax.swing.JFrame {
     private void btnExcluirPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirPedidoActionPerformed
         ListasDePedidos.excluir(getPosicao());
     }//GEN-LAST:event_btnExcluirPedidoActionPerformed
+
+    private void btnNovoPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoPedidoActionPerformed
+        CadastrarPedido cp = new CadastrarPedido();
+        cp.setVisible(true);
+    }//GEN-LAST:event_btnNovoPedidoActionPerformed
 
     /**
      * @param args the command line arguments

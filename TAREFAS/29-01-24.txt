@@ -1,0 +1,95 @@
+vc tem tempo pra rastrear os municipios    cajamr barueri cabreuva itupeva jundiao osasco e multa federal do renvam 878482830 placa dss6j34
+
+38265231806 - ok
+@Moi268268 -  ok
+8b825a012
+8138708306
+
+Paciente p = new Paciente();
+
+p = ListaPaciente.lista.get(id);
+
+public DetalhesConsulta() {
+}
+
+int linhaSelecionada = getPosicao
+
+DetalhesConsulta dc = DetalhesConsulta(linhaSelecionada);
+dc.setLocationRelativeTo(null);
+dc.setVisible(true);
+
+if(p.isConsultaRealizada()) {
+    checkConsultaRealizada.setSelected(true);
+    checkConsultaRelizada.setEnabled(false);
+}else{
+    checkConsultaRealizada.setSelected(false);
+}
+
+
+Paciente p = new Paciente();
+
+        try {
+            // Validação dos Campos
+            if (campoObrigatorioVazio(fieldNomePaciente, "Nome do(a) Paciente") ||
+                campoObrigatorioVazio(fieldTelefone, "Telefone") ||
+                campoObrigatorioVazio(fieldCpf, "CPF") ||
+                campoObrigatorioVazio(fieldDataConsulta, "Data da Consulta")) {
+                return;  // Se algum campo obrigatório estiver vazio, interrompe o cadastro.
+            }
+
+            // Validando o CPF, o telefone e a data da consulta
+            if (!validarCPF(fieldCpf.getText()) ||
+                !validarTelefone(fieldTelefone.getText()) ||
+                !validarDataConsulta(fieldDataConsulta.getText())) {
+                return;  // Se alguma validação de formato falhar, interrompe o cadastro.
+            }
+
+            p.setNomePaciente(fieldNomePaciente.getText());
+            p.setTelefone(Double.parseDouble(fieldTelefone.getText()));
+            p.setDataConsulta(fieldDataConsulta.getText());
+            p.setCpf(fieldCpf.getText());
+            p.setConsultaRealizada(false);
+
+            // Adicionando à lista
+            if (ListaPaciente.adicionar(p)) {
+                JOptionPane.showMessageDialog(null, "Consulta cadastrada com sucesso!");
+                
+                // Fechando a janela de cadastro após o sucesso
+                dispose();
+                
+                // Atualizando a tabela na tela principal
+                TelaPrincipal tp = new TelaPrincipal();
+                tp.atualizarTabela();
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Consulta não pode ser cadastrada");
+            System.out.println(e);
+        }
+    }                                            
+
+    // ... outros métodos omitidos ...
+
+    private boolean campoObrigatorioVazio(JTextField campo, String nomeCampo) {
+        if (campo.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Campo '" + nomeCampo + "' é obrigatório.");
+            return true;
+        }
+        return false;
+    }
+
+    private boolean validarCPF(String cpf) {
+        // Adicione a lógica de validação do CPF
+        return true;  // Substitua pelo código de validação real
+    }
+
+    private boolean validarTelefone(String telefone) {
+        // Adicione a lógica de validação do telefone
+        return true;  // Substitua pelo código de validação real
+    }
+
+    private boolean validarDataConsulta(String dataConsulta) {
+        // Adicione a lógica de validação da data da consulta
+        return true;  // Substitua pelo código de validação real
+    }
+}

@@ -40,7 +40,7 @@ public class ListasDePedidos {
 }
       public static boolean excluir(int id){
         try {
-            if (id <=0){
+            if (id <=1){
                 JOptionPane.showMessageDialog(null,"Selecione um intem para excluir.");
             } else{
                 lista.remove(id);
