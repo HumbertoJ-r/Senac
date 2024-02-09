@@ -1,0 +1,283 @@
+05/01/2024 - SEXTA FEIRA
+
+import javax.swing.JOptionPane;
+/* USO DO JOPtionPane */
+/* OPÇÕES DO JOPtionPane 
+	- showConfimDialog - apresenta uma pergunta de confirmação com sim/não/cancelar
+	- showInputDialog - agaurda uma entrada de dados do usuário (input)
+	- showMessageDialog - janela com mensagem para o usuário 
+	- showOptionDialog - janela customizável utilizando os recursos do java 
+*/
+
+JOptionPane.showConfirmDialog(parentComponent: null, message: "Mensagem de confirmação"); 
+JOptionPane.showConfirmDialog(parentComponent: null, message: "Mensagem de confirmação", title: "Tela de confirmação", optionType: 0, messageType: 0); 
+//optionType - 0 = ERRO - 1 = Informação - 2 = Warning
+//mesageType - 0 = YES/NO - 1 = YES/NO/CANCEL - 2 OK/CANCEL
+JOptionPane.showInputDialog(message: "Insira algo no campo abaixo!"); 
+JOptionPane.showMessageDialog(parentComponet: null, message: "Esta é a uma mensagem do sistema", title: "Mensagem", messageType: 2);
+String [] options = {"AAA", "BBB", "CCC", "DDD"}
+JOptionPane.showOptionDialog(parentComponet: null, message: "Opções", title: "Menu de Opções", optionType: 0, messageType: 0, icon: null, options, options[0]);
+
+int resposta = 0;
+//RESPOSTA 0 = SIM // RESPOSTA 1 = NÃO
+do {
+	String nome = JOptionPane.showInputDialog("Digite seu nome: ");
+	if (nome.equalsIgnoreCase("Pedro")) {
+		JOptionPane.showMessageDialog(null, "Olá tutor" + nome + ".", "Boa-vindas!", 1); 
+	} else if (nome.isBlank()) {
+		JOptionPane.showMessageDialog(null, "Nome invalido!", "Erro!", o); 
+ 	} else {
+		JOptionPane.showMessageDialog(null, "Olá, aluno ", + nome + ".", "Boas-Vindas!", 1);
+	}
+	resposta = JOptionPane.showConfirmDialog(null, "Deseja continuar?");
+}while(resposta == 0);
+
+
+isBlank - se está vazio ou com um monte de espaços em branco ele considera que o campo está sem nada
+
+isEmpty - Considera que o tamanho do texto do campo é ZERO.
+
+
+06/01/2024 - SÁBADO 
+
+
+package quiexemplo2;
+public class GUIExemplo2 {
+	public static void main (Strinf[] args) {
+		Tela1 tela = new Tela1();
+		tela.setVisible(true);
+		tela.setVisible(false);
+
+		JFrame telaPrincipal = new JFrame();
+
+		JPanel painel = new JPanel();
+		JLabel texto = new JLabel("Digite o seu nome: ");
+
+		JTextField input = new JTextField(10);
+		JButton botao = new JButton("Entrar");
+
+		//Adicionar um ouvinte de ação ao botão
+		botao.addActionListener(
+			new ActionListener() {
+				@Override
+				plubic void actionPerformed(ActionEvent e) {
+					String nome = input.getText();
+					if (nome.equalsIgnoreCase("Junior")) {
+						JOptionPane.showMessageDialog(null, "Olá tutor " + nome + ".", " Boas-vindas!", 1);
+					} else if (nome.isBlank()){
+						JOptionPane.showMessageDialog(null, "Nome inválido!", "Erro!", 0);
+					} else {
+						JOptionPane.showConfirmDialog(null, "Olá, aluno " + nome + ".", "Boas-vindas!", 1);
+					}
+				}
+			});
+			
+			painel.add(texto);
+			painel.add(input);
+			painel.add(botao);
+			telaPrincipal.add(painel);	
+
+			telaPrincipal.setVisible(true);
+			telaPrincipal.setSize(800,600);
+			telaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			telaPrincipal.pack();
+	}
+}
+
+
+08/01/2024 - SEGUNDA 
+
+Criação do main GUIBuilder 
+Criação JFrame 
+Crianção de dois labels 
+Crianção de dois botões 
+Nomear botões e labels
+alteração da fonte 
+
+txtBemVindos 
+txtSelecionar
+bntCadastrarPedidos
+bntListarPedidos
+
+09/01/2024 - TERÇA
+
+package guibuilder;
+public class GUIBuilder {
+	puclic static void main (String [] args) {
+		menuPrincipal mp = new MenuPrincipal ();
+		mp.setVisible(true);
+
+	}
+}
+
+borda bevel 
+
+novo JFrame 
+CadastroPedido 
+
+label- Cadastre o Pedido
+label- Preencha todos os campos abaixo:
+
+novo JFrame 
+ListarPedido
+
+label- listagem de Peidos 
+label- todos os pedidos do dia 
+
+10/01/2024 - QUARTA 
+
+cadastrar cadastro 
+criar o botão de sair 
+btnSair
+dispose();
+
+label
+nome do cliente 
+preço R$
+quantidade
+acompanhamento 
+adicional 
+
+txtNomeCliente
+txtPreco
+txtQuantidade
+txtAcompanhamento 
+txtAdiconal 
+
+textField
+fieldNomeCliente 
+textField
+fieldPreco
+textField
+fieldQuantidade
+
+Radio Button
+Sim
+rbnSim 
+Radio Button 
+Não 
+rbnNao 
+incluir botões no grupo acompanhamento 
+
+criar um button group 
+acompanhamento 
+
+criar novo botão 
+cadastrar
+btnCadastrar
+
+listar pedido 
+criar o botão de sair 
+btnSair
+dispose();
+
+11/01/2024 - QUINTA 
+
+criando combo box 
+selecione uma opção:
+não
+bancon
+cebola 
+calarasa 
+bife exta
+batata frita 
+catupiry
+4 queijos 
+comboAdicional 
+
+criar uma classe pedido
+
+packege guibuilder;
+public class Pedido {
+
+	private int id;
+	private String nomeCliente;
+	private double preco;
+	private int quantidade;
+	private String acompanhamento;
+	private String adicional;
+	
+	public Pedido() {
+	
+	}
+	
+	public Pedido (int id, String nomeCliente, double preco, int quantidade, String acompanhamento, String adicional);
+		this.id = id;
+		this.nomeCliente = nomeCliente;
+		this.preco = preco;
+		this.quantidade = quantidade;
+		this.acompanhamento = acompanhamento;
+		this.adicional = adicional;
+		
+	}
+	
+	Get e Set
+}
+
+
+17/01/2024 - QUARTA
+
+Trabalhar na listar pedidos
+
+criar tabela 
+tabela pedidos 
+
+criar botão 
+Novo Pedido 
+Excluir Pedido
+Atualizar Pedido
+
+btnNovoPedido
+btnExcluirPedido
+btnAtualizarPedido
+
+criar classe ListaPedido
+
+packege quibuilder;
+
+import java.util.ArrayList;
+
+public class ListaPedido {
+	public static ArrayList<Pedido> lista = new ArrayList<Pedido>();
+	
+	public static void adicionar(Pedido p){
+	
+		//Execeções
+		try {
+			//Se tudo der certo
+			//Validações 
+		if(p.getNomeCliente().isBlank() || p.getNomeCliente().isEmpty()
+			||p.getPreco() <=0 ||p.getQuantidade() <=0 || p.getAcompanhamento().isBlank||
+			||p.getAcompanhamento().isEmpty() || p.getAdicional().isBlank() || p.getAdicional().isEmpty());
+			System.out.println("Produto possui um campo inválido");
+		}catch (Exception e){
+			//Se aldo der errado
+		}
+		
+		//validação
+		if(p.getNomeCliente().isBlank() || p.getNomeCliente().isEmpty()
+			|| p.getPreco() <= 0 || p.getQuantidade() <=0 || p.getAcompanhamento().isBlank()
+			|| p.getAcompanhamento().isEmpty() || p.getAdicional().isBlank() || p.getAcional().isEmpty()){
+		System.out.println("Produto possui um campo inválido");
+	}else {
+		lista.add(p);
+		System.out.println("Produto adicionado na lista");
+	      }
+		
+	}
+}
+
+alterar no main para fazer o teste se está funcionando 
+
+packege guilbuilder;
+public class GUIBuilder {
+	public static void main (String [] args) {
+		//MenuPrincipal mp = new MenuPrincipal();
+		//mp.setVisible(true);
+
+		Pedido p = new Pedido();
+		ListaPedido.adicionar(p);
+	
+	}
+
+}
