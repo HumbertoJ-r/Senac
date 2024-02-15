@@ -1,0 +1,32 @@
+tela de principal 
+
+lista de clientes 
+
+id cliente 
+nome cliente 
+telefone cliente 
+cpf cliente 
+categoria da habilitação 
+
+tela de cadastro 
+
+cadastrar novo cliente 
+nome cliente 
+cpf 
+endereço 
+data de nascimento 
+categoria 
+
+classe cliente 
+
+id
+nome 
+cpf 
+data nascimento 
+endereço 
+
+classe primeira habilitação 
+
+preco 
+categoria 
+

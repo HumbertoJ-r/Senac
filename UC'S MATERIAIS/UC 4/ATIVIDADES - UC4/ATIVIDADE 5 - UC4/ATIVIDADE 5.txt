@@ -1,0 +1,46 @@
+ATIVIDADE 5 UC 4
+
+EU DIGITEI O CÓDIGO USE UCATIVIDADE5
+
+RETORNOU: switched to db ucatividade5
+
+EU DIGITEI O CÓDIGO NO _MONGOSH
+CÓDIGO:
+
+db.produto.insertOne({
+nome: "Cadeira",
+descricao: "Madeira Marrom",
+estoque: "10",
+fabricante: "Madeira de  Ferro"
+});
+
+retornou na tela:
+
+acknowledged: true,
+insertedId: ObjectId("64ab7a0429d813d1b7831671")
+
+e criou uma pasta "PRODUTO"
+
+EU DIGITEI O CÓDIGO db.produto.find({nome: "Cadeira"}) PARA FAZER UMA PESQUISA PELO NOME.
+
+RETORNOU NA TELA:
+
+{
+  _id: ObjectId("64ab7a4829d813d1b7831672"),
+  nome: 'Cadeira',
+  descricao: 'Madeira Marrom',
+  estoque: 10,
+  fabricante: 'Madeira de Ferro'
+}
+
+EU DIGITEI O CÓDIGO db.produto.find({fabricante: "Madeira de Ferro"})
+
+RETORNOU:
+
+{
+  _id: ObjectId("64ab7a4829d813d1b7831672"),
+  nome: 'Cadeira',
+  descricao: 'Madeira Marrom',
+  estoque: 10,
+  fabricante: 'Madeira de Ferro'
+}

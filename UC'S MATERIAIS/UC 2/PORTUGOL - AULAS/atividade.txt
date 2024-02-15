@@ -1,0 +1,23 @@
+inteiro qtde_convidados, 
+
+
+
+        qtde_lugares = 220
+
+ 
+
+        escreva ("Digite a quantidade de convidados para o evento: ")
+
+        leia (qtde_convidados)
+
+        se (qtde_convidados <= 0 ou qtde_convidados > 350)
+
+           {escreva ("Número de convidados inválido")}
+
+        senao se (qtde_convidados >=0 ou qtde_convidados <= 150)
+
+           {escreva("Utilize o auditório Alfa \n")}
+
+        se (qtde_convidados >= 150)
+
+           {escreva("Inclua mais :", qtde_lugares - qtde_convidados," cadeiras")}

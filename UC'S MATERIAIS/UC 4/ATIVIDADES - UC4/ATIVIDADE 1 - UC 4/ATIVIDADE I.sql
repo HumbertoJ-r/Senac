@@ -1,0 +1,21 @@
+create user 'USER_RELATORIO'@'localhost' identified by '123456';
+select * from mysql.user;
+grant select on *.* to 'USER_RELATORIO'@'localhost';
+flush privileges;
+create role 'RELATORIOS';
+GRANT SELECT ON uc4atividades.* TO 'RELATORIOS';
+FLUSH privileges;
+GRANT 'RELATORIOS' TO 'USER_RELATORIO'@'localhost';
+SET DEFAULT ROLE 'RELATORIOS' TO 'USER_RELATORIO'@'LOCALHOST';
+select * from mysql.user;
+show grants for 'RELATORIOS';
+
+create user 'USER_FUNCIONARIO'@'localhost' identified by '123456';
+select * from mysql.user;
+create role 'FUNCIONARIOS';
+GRANT SELECT, INSERT, UPDATE, DELETE ON uc4atividades.* TO 'FUNCIONARIOS';
+FLUSH privileges;
+GRANT 'FUNCIONARIOS' TO 'USER_FUNCIONARIO'@'localhost';
+SET DEFAULT ROLE 'FUNCIONARIOS' TO 'USER_FUNCIONARIO'@'LOCALHOST';
+select * from mysql.user;
+show grants for 'FUNCIONARIOS';
