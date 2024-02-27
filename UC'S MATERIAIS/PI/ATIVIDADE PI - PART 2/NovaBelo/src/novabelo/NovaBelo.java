@@ -1,5 +1,6 @@
 package novabelo;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class NovaBelo {
@@ -10,6 +11,7 @@ public class NovaBelo {
         String resposta;
         boolean rodando = true;
         PrimeiraHabilitacao habilitacao = new PrimeiraHabilitacao();
+        Cliente cliente = new Cliente();
 
         while (rodando) {
             System.out.println("[1] Cadastrar Cliente");
@@ -22,7 +24,7 @@ public class NovaBelo {
             switch (opcao) {
 
                 case "1": {
-                    Cliente cliente = new Cliente();
+                    
 
                     System.out.println("Cadastro de Cliente");
                     System.out.print("Nome: ");
@@ -55,17 +57,31 @@ public class NovaBelo {
                 }
 
                 case "2": {
-                    for (Cliente cliente : ListaCliente.listar()) {
-                        System.out.println("Cliente:");
-                        System.out.println("Nome: " + cliente.getNome());
-                        System.out.println("CPF: " + cliente.getCpf());
-                        System.out.println("Endereco: " + cliente.getEndereco());
-                        System.out.println("Data de Nascimento: " + cliente.getDataNasc());
-                        System.out.println("Categoria de Habilitacao: " + habilitacao.getCategoria());
-                        System.out.println("Preco: R$" + habilitacao.getPreco());
-                    }
+                for (Iterator<Cliente> it = ListaCliente.listar().iterator(); it.hasNext();) {
+                    System.out.println("Cliente:");
+                    System.out.println("Nome: " + cliente.getNome());
+                    System.out.println("CPF: " + cliente.getCpf());
+                    System.out.println("Endereco: " + cliente.getEndereco());
+                    System.out.println("Data de Nascimento: " + cliente.getDataNasc());
+                    System.out.println("Categoria de Habilitacao: " + habilitacao.getCategoria());
+                    System.out.println("Preco: R$" + habilitacao.getPreco());
+                }
                 }
                 break;
+                
+                case "3": { 
+                    
+                    String cliente.setNome = scanner.nextLine();
+                    for (int i = 0; i < cliente.getNome.size(); i++){
+                }
+
+
+                    break;
+                }
+                
+                case "4": {
+                    break;
+                }
 
             }
 

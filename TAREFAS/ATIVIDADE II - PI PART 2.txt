@@ -69,3 +69,11 @@ Switch (opcao) {
 deu certo 
 
 https://www.youtube.com/watch?v=biY3Cod4Bjo
+
+
+case (int i = 0; i < nome.size(); i++)
+
+nome uTemp = nome.get(i);
+
+if (nome.equals(uTemp.getNome())){
+System.out.println("Cliente encontrado");
