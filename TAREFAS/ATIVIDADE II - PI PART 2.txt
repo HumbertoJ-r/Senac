@@ -77,3 +77,19 @@ nome uTemp = nome.get(i);
 
 if (nome.equals(uTemp.getNome())){
 System.out.println("Cliente encontrado");
+
+
++ Cliente()                    
++ Cliente(nome: String, cpf: String, endereco: String, dataNasc: String, categoria: String, preco: Double) 
++ getNome(): String        
++ setNome(nome: String): void
++ getCpf(): String           
++ setCpf(cpf: String): void 
++ getEndereco(): String   
++ setEndereco(endereco: String): void 
++ getDataNasc(): String   
++ setDataNasc(dataNasc: String): void 
++ getCategoria(): String  
++ setCategoria(categoria: String): void 
++ getPreco(): Double       
++ setPreco(preco: Double): void 
