@@ -9,17 +9,22 @@ public class Cliente {
     private String dataNasc;
     private String categoria;
     private Double preco;
+    private String telefone;
+    private int id;
+    
 
     public Cliente() {
     }
 
-    public Cliente(String nome, String cpf, String endereco, String dataNasc, String categoria, Double preco) {
+    public Cliente(String nome, String cpf, String endereco, String dataNasc, String categoria, Double preco, int id, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.dataNasc = dataNasc;
         this.categoria = categoria; 
         this.preco = preco;
+        this.id = id;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -68,6 +73,22 @@ public class Cliente {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
     
     

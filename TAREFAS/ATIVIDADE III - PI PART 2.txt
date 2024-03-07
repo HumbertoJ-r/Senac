@@ -1,0 +1,61 @@
+
+endereco x
+datanascimento x
+categoria x
+preco x
+telefone
+id
+
+
+ private DefaultTableModel montarTabela(){
+        String[] colunas = {"ID", "Cliente", "CPF", "Data Nascimento", "Telefone", "Endereço", "Categoria", "Débito"};
+        
+        //Criamos a tabela "na mão"
+        DefaultTableModel tabela = new DefaultTableModel(colunas, 0);
+        
+        //Pegar os dados da lista de produtos
+        ArrayList<Cliente> lista = ListaCliente.listar();
+        
+        //FOR para MONTAR A LINHA na tabela
+        for (int i = 0; i < lista.size(); i++) {
+            Cliente c = lista.get(i);
+            
+            
+            
+            String [] linha = {
+                Integer.toString(c.getId()),
+                c.getNome(),
+                c.getCpf(),
+                c.getDataNasc(),
+                c.getCategoria(),
+                c.getEndereco(),
+                c.getTelefone(),
+                Double.toString(c.getPreco()),
+                };
+            tabela.addRow(linha); //Não esquecer de adicionar a linha na tabela!
+        }
+        
+        return tabela;
+    }
+    
+
+    
+    /*private int getPosicao(){
+        int posicao = tabelaCliente.getSelectedRow();
+        
+        if(posicao <= -1) {
+            JOptionPane.showMessageDialog(null, "Selecione um item para excluir:");
+        }
+        
+        return posicao;
+    }*/
+
+montarTabela()
+
+feedbackNomeCliente
+feedbackCpf
+feedbackNasc
+feedbackEndereco
+feedbackTelefone
+feedbackCategoria
+feedbackValor
