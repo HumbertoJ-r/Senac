@@ -1,0 +1,62 @@
+private int id
+private string nome
+private double preco
+private int quantidade
+private string estado
+private string categoria 
+private boolean vendido
+private string numeroNotaFiscal
+private string dataDaCompra
+
+private connection convecao;
+public Connection getConexao()
+return conexao;
+
+public void conectar() {
+try {
+Class.forName(className:"com.mysql.cj.jdbc.Driver");
+conexao = DriverManager.getConnection(url:"jdbc:mysql://localhost, user: "root", password"erick031119");
+system.out.println("Sucesso de conexao!");
+} catch (ClassNotFoundExecption e) {
+System.out.println("Falha ao carregar a classe de conexao. Classe nao encontrada");
+} catch(SQLException e) {
+System.out.println("Erro ao conectar com o banco. Erro de SQL.");
+}
+}
+
+public void desconectar (){
+try {
+if(conexao != null && !conexao.isClosed()){
+conexao.close();
+System.out.println("Desconectado com sucesso!");
+}
+} catch (SQLException e) {
+System.out.println("Erro ao desconectar");
+}
+
+pulic static String converterParaSQL(String dataAntiga) {
+String[] partesData = dataAntiga.split("/");
+String dataNova = partesData[2] +"-" + paresData[0];
+return dataNova;
+
+public static String converterParaJava(String dataAntiga) {
+String[] patesData = dataAntiga.split("-");
+String dataNova = partesData[2] + "/" + partesData[1] + partesData[0];
+}
+
+padrão mvc
+m model classes que modelam o sistema (.java)
+v view jframes em geral 
+c controller controlam as informações e o banco de dados 
+
+id int primary key auto_increment,
+nome varchar(100),
+preco double,
+quantidade int,
+estado varchar(10),
+categoria varchar(150),
+vendido boolean,
+numeroNotaFiscal varchar(50),
+dataDaCompra date
+);
+
