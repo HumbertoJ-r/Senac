@@ -1,0 +1,241 @@
+programa
+
+{
+
+	
+
+	funcao inicio()
+
+	{
+
+		inteiro num1, num2, aux
+
+
+
+		num1 = 5
+
+		num2 = 10
+
+
+
+		escreva("Valor antes da troca: ", "num1 = ",num1," num2 = ", num2, "\n")
+
+		
+
+		aux = num2 
+
+		num2 = num1
+
+		num1 = aux
+
+
+
+		escreva("Valor apos da troca: ", "num1 = ",num1," num2 = ", num2)
+
+		
+
+		
+
+		
+
+	}
+
+}
+
+o exemplo que tinha prometido para o aluno
+
+programa
+
+{
+
+	funcao inicio()
+
+	{
+
+		cadeia continuar
+
+		caracter escolhaUsuario
+
+		faca
+
+		{
+
+			escreva("\n O que você quer fazer? C - D")
+
+			leia(escolhaUsuario)
+
+			
+
+			escolha(escolhaUsuario)
+
+			{
+
+				caso 'C':
+
+					escreva("Estou comendo uma pizza")
+
+				pare	
+
+				caso 'D':
+
+					escreva("Dormindo ZzZZZ")
+
+				pare
+
+				caso contrario:
+
+					escreva("Não sei o que fazer")
+
+				pare
+
+			}
+
+
+
+			escreva("Quer continuar? sim - nao")
+
+			leia(continuar)
+
+		} enquanto(continuar == "sim")
+
+	}
+
+}
+
+programa
+
+{
+
+	
+
+	funcao inicio()
+
+	{
+
+		logico sensorporta
+
+		cadeia resposta
+
+
+
+		escreva("\nQuer abrir o portao? responda sim ou nao: \n")
+
+		leia(resposta)
+
+
+
+		se (resposta == "sim")
+
+		{
+
+			sensorporta = verdadeiro	
+
+		}
+
+		senao
+
+		{
+
+			sensorporta = falso	
+
+		}
+
+
+
+		se (sensorporta == verdadeiro)
+
+		{
+
+			escreva("\nPortao aberto!")	
+
+		}
+
+		senao
+
+		{
+
+			escreva("\nPortao fechado!")
+
+		}	
+
+	}
+
+}
+
+programa
+
+{
+
+	funcao inicio()
+
+	{
+
+		inteiro num1, soma = 0
+
+		inteiro i
+
+		para(i = 0; i < 100; i++)
+
+		{
+
+
+
+			escreva("\n Digite o número")
+
+			leia(num1)
+
+			soma = soma + num1	
+
+		}
+
+		escreva("Resultado: ", soma)
+
+	}
+
+}
+
+programa
+
+{
+
+	
+
+	funcao inicio()
+
+	{
+
+		inteiro num1, num2, soma = 0
+
+
+
+		escreva("Primeiro valor")
+
+		leia(num1)
+
+
+
+		escreva("Segundo valor")
+
+		leia(num2)
+
+
+
+		se(num1 > num2)
+
+		{
+
+			escreva("Primeiro valor é o maior")
+
+		}
+
+		se(num2 > num1)
+
+		{
+
+			escreva("Segundo valor é o maior")
+
+		}
+
+	}
+
+}
