@@ -1,0 +1,55 @@
+@options
+@packages
+-classpath
+'C:/Users/humbe/.m2/repository/org/hibernate/orm/hibernate-core/6.1.5.Final/hibernate-core-6.1.5.Final.jar;C:/Users/humbe/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar;C:/Users/humbe/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar;C:/Users/humbe/.m2/repository/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31.jar;C:/Users/humbe/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'20'
+-sourcepath
+'C:/Users/humbe/OneDrive/Área de Trabalho/SENAC/Senac/CenaFlix/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/humbe/OneDrive/Área de Trabalho/SENAC/Senac/CenaFlix/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'CenaFlix 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'CenaFlix 1.0-SNAPSHOT API'
+com.mycompany.cenaflix
+com.mycompany.cenaflix.gui
+com.mycompany.cenaflix.model
+C:\Users\humbe\.m2\repository\org\hibernate\orm\hibernate-core\6.1.5.Final\hibernate-core-6.1.5.Final.jar = 1710960339289
+C:\Users\humbe\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.0.0\jakarta.persistence-api-3.0.0.jar = 1710960339468
+C:\Users\humbe\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.0\jakarta.transaction-api-2.0.0.jar = 1710960339371
+C:\Users\humbe\.m2\repository\com\mysql\mysql-connector-j\8.0.31\mysql-connector-j-8.0.31.jar = 1710961240588
+C:\Users\humbe\.m2\repository\com\google\protobuf\protobuf-java\3.19.4\protobuf-java-3.19.4.jar = 1710961241011
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\src\main\java = 1710961988946
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\allclasses-index.html = 1711054362594
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\allpackages-index.html = 1711054362597
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\copy.svg = 1711054362643
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\element-list = 1711054362251
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\help-doc.html = 1711054362636
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\index-all.html = 1711054362625
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\index.html = 1711054362574
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\member-search-index.js = 1711054362604
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\module-search-index.js = 1711054362599
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\overview-summary.html = 1711054362630
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\overview-tree.html = 1711054362569
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\package-search-index.js = 1711054362601
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\script.js = 1711054362641
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\search-page.js = 1711054362649
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\search.html = 1711054362628
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\search.js = 1711054362646
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\serialized-form.html = 1711054362373
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\stylesheet.css = 1711054362638
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\tag-search-index.js = 1711054362605
+C:\Users\humbe\OneDrive\Área de Trabalho\SENAC\Senac\CenaFlix\target\site\apidocs\type-search-index.js = 1711054362602
