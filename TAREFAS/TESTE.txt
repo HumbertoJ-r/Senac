@@ -1,0 +1,79 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class VendaFrame extends JFrame {
+    private JTextField valorTextField;
+    private JButton calcularButton;
+
+    public VendaFrame() {
+        initComponents();
+    }
+
+    private void initComponents() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Calculadora de Venda");
+
+        valorTextField = new JTextField(10);
+        calcularButton = new JButton("Calcular");
+
+        calcularButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcularButtonActionPerformed(e);
+            }
+        });
+
+        GroupLayout layout = new GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(valorTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(calcularButton)
+                                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(valorTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(calcularButton))
+                                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        pack();
+        setLocationRelativeTo(null);
+    }
+
+    private void calcularButtonActionPerformed(ActionEvent evt) {
+        try {
+            double valorVenda = Double.parseDouble(valorTextField.getText());
+
+            if (valorVenda > 500) {
+                String descontoStr = JOptionPane.showInputDialog(this, "Informe o percentual de desconto:");
+                double desconto = Double.parseDouble(descontoStr);
+
+                double valorComDesconto = valorVenda - (valorVenda * desconto / 100);
+
+                JOptionPane.showMessageDialog(this, "Valor com desconto: R$ " + valorComDesconto);
+            } else {
+                JOptionPane.showMessageDialog(this, "Valor total: R$ " + valorVenda);
+            }
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Por favor, insira um valor válido.");
+        }
+    }
+
+    public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VendaFrame().setVisible(true);
+            }
+        });
+    }
+}
